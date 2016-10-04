@@ -1,0 +1,74 @@
+/*****************************************************
+
+Styleguide specific styles
+
+******************************************************/
+
+@import "variables";
+
+$color-dark: #343434;
+
+body {
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.side-bar-nav {
+    height: 88vh;
+}
+
+.side-bar-nav__header {
+    padding: 0.5em 24px;
+    color: $color-brand;
+    border-bottom: 2px solid $color-brand;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.side-bar-nav__content {
+    padding: 24px;
+}
+
+.chrome {
+    width: 100%;
+    height: 5px;
+    background-color: $color-brand;
+}
+
+a {
+    text-decoration: none;
+    color: $color-dark;
+}
+
+a:hover{
+    color: lighten($color-dark, 50%);
+}
+
+.branding {
+    margin: 24px 0 0 24px;
+}
+
+.branding__header {
+    display: inline-block;
+    font-size: 24px;
+    color: #6d7070;
+    border-bottom: 1px dashed #6d7070;
+    margin: 0 0 5px 0;
+}
+
+.branding__sub-header {
+    font-size: 11px;
+    letter-spacing: 0.3px;
+    color: #0779be;
+    margin-top: 0;
+    text-transform: uppercase;
+    font-weight: light;
+}
+
+.styleguide__header {
+    margin: 0 0 24px 0;
+    padding: 0.5em 24px;
+    color: $color-brand;
+    border-bottom: 2px solid $color-brand;
+}

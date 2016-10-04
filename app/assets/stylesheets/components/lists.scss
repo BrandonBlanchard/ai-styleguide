@@ -1,0 +1,27 @@
+
+/******************************************************
+
+  Component:
+    Lists (ul/ol)
+
+  Description:
+    A set of default styles and modifiers for lists i.e. ul,ol
+
+  Usage:
+    <ul class="list--no-indent list--no-bullets">
+      <li>
+        Some content
+      </li>
+    </ul>
+
+
+******************************************************/
+
+
+.list--no-indent {
+  padding-left: 0;
+}
+
+.list--no-bullets {
+	list-style: none;
+}

@@ -1,0 +1,59 @@
+@import "../variables.scss";
+
+/**********************************************************
+
+Component: 
+    Media Object
+
+Description: 
+    A repeated piece of content, optionally with an image floated left/right or placed in it's own vertical space.
+    Content next to floated images must have a size applied, ideally through the use of a grid system
+
+Usage:
+    <div class="media-object">
+        <div class="media-object__image--left">
+            <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Some Image&w=172&h=130">
+        </div>
+
+        <div class="">
+            <h2>Some Header</h2>
+            <p>Some Copy</p>
+        </div>
+    </div>
+
+**********************************************************/
+
+.media-object {
+    margin-bottom: 1em;
+    overflow: auto;
+}
+
+.media-object__image {
+    display: block;
+}
+
+.media-object__image--left {
+    display: inline-block;
+    float: left;
+    margin-right: 1em;
+}
+
+.media-object__image--right {
+    display: inline-block;
+    float: right;
+    margin-left: 1em;
+}
+
+.media-object__header {
+  margin-top: 0;
+}
+
+.media-object__content {
+    margin-bottom: $margin--horizontal;
+}
+
+.media-object__content--left {
+    display: inline-block;
+    float: left;
+}
+

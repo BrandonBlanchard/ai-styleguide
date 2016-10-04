@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AiStyleguide</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="chrome"></div>
+<div class="row">
+    <div class="span--12">
+    <div class="branding">
+        <h1 class="branding__header">Allen Institute</h1>
+        <h2 class="branding__sub-header">style guide</h2>
+    </div>
+    </div>
+</div>    
+<div>
+    <div class="span--2 side-bar-nav">
+        <h2 class="side-bar-nav__header"> Navigation </h2>
+        <div class="side-bar-nav__content">
+
+            <ul class="link-block">
+                <li>
+                    <h4 class="collapse-top">Methodologies</h4>
+                </li>
+
+                <li class="link-block__link ">
+                    <%= link_to 'BEM', bem_path %>
+                </li>
+
+                <li>
+                    <h4 class="collapse-top">Core Css</h4>
+                </li>
+
+                <li class="link-block__link ">
+                    <%= link_to 'Grid', grid_path %>
+                </li>
+
+                <li class="link-block__link">
+                    <%= link_to 'Typography', typography_path %>
+                </li>
+
+                <li class="link-block__link">
+                    <%= link_to 'Colors', colors_path %>
+                </li>
+
+                <li class="link-block__link">
+                    <%= link_to 'Icons', icons_path %>
+                </li>
+
+                <li class="link-block__link">
+                    <%= link_to 'Header box', headerBox_path %>
+                </li>
+
+                <li class="link-block__link">
+                    <%= link_to 'Media Object', mediaObject_path %>
+                </li>
+
+                <li class="link-block__link">
+                    <%= link_to 'Toggle box', toggleBox_path %>
+                </li>
+
+                <li>
+                    <h4>Core Js</h4>
+                </li>
+            </ul>
+
+        </div>
+    </div>    
+    <div class="span--10">
+        <%= yield %>
+    </div>
+</div>
+</body>
+</html>

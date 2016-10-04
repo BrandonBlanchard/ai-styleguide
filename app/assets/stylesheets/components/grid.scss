@@ -1,0 +1,62 @@
+@import "../variables";
+
+/*****************************************************************************************
+  Component:
+    Grid
+
+   Description:
+
+
+   Usage:
+
+
+******************************************************************************************/
+
+@for $i from 1 through $cols {
+
+  .span--#{$i} {
+      width: ($column-width * $i) + ($column-gutter * ($i - 1));
+      margin-right: $column-gutter;
+      margin-bottom: $margin--vertical;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      float: left;
+  }
+
+  .offset--#{$i} {
+    margin-left: ($column-width * $i) + ($column-gutter * $i);
+    box-sizing: border-box;
+  }
+}
+
+.row {
+  overflow: auto;
+}
+
+.break {
+  clear: left;
+}
+
+.expand {
+  margin-bottom: $margin--vertical !important;
+}
+
+.collapse {
+  margin-bottom: 0 !important;
+}
+
+.collapse-top {
+ margin-top: 0 !important; 
+}
+
+.grid-test{
+  background-color: #343434;
+  min-height: 50px;
+  
+  color: $white;
+  font-size: 12px;
+  text-align: center;
+  
+  padding: 1.5em 0;
+  border-radius: 5px;
+}

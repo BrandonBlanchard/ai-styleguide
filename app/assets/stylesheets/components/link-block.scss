@@ -1,0 +1,38 @@
+@import "../variables";
+
+/*********************************************************************
+  Component:
+    Link Block
+
+   Description:
+    A horizontal or vertical list of links
+
+   Usage:
+    <ul class="link-block">
+      <li class="link-block__link">
+        <a href="some_url"> Some Link </a>
+      </li>
+    </ul>
+
+*********************************************************************/
+
+.link-block {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.link-block__link {
+  display: inline-block;
+  clear: both;
+  float: none;
+  cursor: pointer;
+  margin-bottom: $margin--horizontal;
+  margin-right: $margin--horizontal;
+  width: 100%;
+}
+
+.link-block__link-horizontal {
+  float: left;
+  display: inline-block;
+}

@@ -1,0 +1,54 @@
+/************************************************
+
+Color box
+
+a styleguide specific component
+
+************************************************/
+
+@import "../../variables";
+
+.color-box {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    border: 2px solid #343434;
+    overflow: hidden;
+    color: #fff;
+    transition: border-color 0.5s;
+}
+
+.color-box:hover {
+    border-color: lighten(#343434, 20%);
+}
+
+.color-box:hover .color-box__label {
+    background-color: lighten(#343434, 20%);
+}
+
+.color-box__label {
+    font-size: 12px;
+    text-align: left;
+    width: 100%;
+    background-color: #343434;
+    transition: background-color 0.5s;
+    padding: 0.5em 1em;
+}
+
+.color-box__detail {
+    font-size: 10px;
+    text-align: left;
+    margin-top: 2px;
+}
+
+.color--dark-blue {
+    background-color: $color-dark-blue;
+}
+
+.color--brand {
+    background-color: #0779be;
+}
+
+.color--light-gray {
+    background-color: $color-light-gray;
+}

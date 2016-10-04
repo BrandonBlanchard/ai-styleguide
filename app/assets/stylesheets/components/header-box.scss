@@ -1,0 +1,39 @@
+@import "../variables";
+
+/*************************************************************
+Component: Header Box
+Style: BEM
+Usage:
+
+<div class="header-box">
+  <h2 class="header-box__header"> Some Header </h2>
+  <div class="header-box__content"> Some Content </div>
+</div>
+
+************************************************************/
+
+.header-box {
+  border: 1px solid $color-light-gray;
+  margin-bottom: $margin--vertical;
+  overflow-y: hidden;
+}
+
+.header-box__header {
+  background-color: $color-dark-blue;
+  color: $white;
+  font-size: $font-size-small;
+  line-height: 2;
+  height: 24px;
+  padding: 0 $margin--horizontal;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.header-box__content {
+  padding: $margin--horizontal;
+}
+
+.header-box__content--no-pad {
+  padding: 0;
+}
