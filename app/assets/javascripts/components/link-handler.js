@@ -22,6 +22,8 @@ intent:
         event.preventDefault(); // Prevent link from following its href
     });
 
+so many comments....
+
 *****************************************************************************/
 
 (function(){
