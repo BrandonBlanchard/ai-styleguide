@@ -4,10 +4,17 @@ Component:
     Tabs
 
 Description:
-    Allows the creation of tabbed pages where clicking on a tab hides/shows a containers content. 
+    Looks for data-component="tabs" 
 
 Usage:
-    
+    <div data-action="tabs" class="tab-group">
+	<div class="tab-group__tabs">
+        	<a href="#" data-target=".tab-content-1" class="tab-group__tab">Tab 1</a>
+        	<a href="#" data-target=".tab-content-2" class="tab-group__tab">Tab 1</a>
+	</div>
+	<div class="tab-content-1 tab-group__content">Some content</div>
+	<div class="tab-content-1 tab-group__content">Some more content</div>
+    </div>
 
 
 ******************************************************************************/

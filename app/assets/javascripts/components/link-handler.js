@@ -15,14 +15,12 @@ intent:
 	using this modified method we can handle all links like these two
 
 	var helpUrl = "<%= help_url %>";
-    var docsUrl = "<%= docs_url %>";
+    	var docsUrl = "<%= docs_url %>";
 
-    $j('#help_link').click(function(event){
-        var helpWindow = window.open(helpUrl, "onlineHelp", "resizable=1,scrollbars=1,height=600,width=800");
-        event.preventDefault(); // Prevent link from following its href
-    });
-
-so many comments....
+	$j('#help_link').click(function(event){
+	var helpWindow = window.open(helpUrl, "onlineHelp", "resizable=1,scrollbars=1,height=600,width=800");
+	event.preventDefault(); // Prevent link from following its href
+	});
 
 *****************************************************************************/
 
