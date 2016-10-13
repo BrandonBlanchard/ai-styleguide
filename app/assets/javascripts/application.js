@@ -11,5 +11,10 @@
 // about supported directives.
 //= require jquery
 //= require jquery_ujs
+//= require styleguide
 //= require turbolinks
 //= require_tree .
+
+
+//= require components/tabs
+//= require components/link-handler

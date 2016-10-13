@@ -4,6 +4,7 @@ Styleguide specific styles
 
 ******************************************************/
 
+@import "ai-styleguide-styles/example-box";
 @import "variables";
 
 $color-dark: #343434;
@@ -36,15 +37,6 @@ body {
     background-color: $color-brand;
 }
 
-a {
-    text-decoration: none;
-    color: $color-dark;
-}
-
-a:hover{
-    color: lighten($color-dark, 50%);
-}
-
 .branding {
     margin: 24px 0 0 24px;
 }
@@ -71,4 +63,13 @@ a:hover{
     padding: 0.5em 24px;
     color: $color-brand;
     border-bottom: 2px solid $color-brand;
+}
+
+a {
+    color: $color-brand;
+    text-decoration: none;
+
+    &:hover { 
+       border-bottom: 3px solid $color-brand;
+    }
 }

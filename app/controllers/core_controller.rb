@@ -50,4 +50,8 @@ class CoreController < ApplicationController
     render 'colors'
   end
 
+  def link_handler
+    render 'link-handler'
+  end
+
 end

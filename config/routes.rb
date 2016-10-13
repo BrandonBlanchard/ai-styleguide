@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
     # Need to find a way to do pattern matching that maps to a controller/action
+    get '/' => 'core#index'
+
     get '/core/' => 'core#index', :as => :index
 
     get '/core/bem' => 'core#bem', :as => :bem
@@ -20,4 +22,6 @@ Rails.application.routes.draw do
     get '/core/icons' => 'core#icons', :as => :icons
 
     get '/core/colors' => 'core#colors', :as => :colors
+
+    get '/core/link-handler' => 'core#link_handler', :as => :link_handler
 end

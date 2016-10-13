@@ -1,0 +1,105 @@
+/***********************************************************
+
+	Component:
+		Example Box
+
+	Purpose:
+		A box for holding code and the rendered functioning example of that code
+
+	Usage:
+	<div class="example-box">
+		<div class="example-box__code">
+			<span class="example-box__label">code</span>
+			<pre class="code">
+			</pre>
+		</div>
+
+		<div class="example-box__example">
+			<span class="example-box__label">example</span>
+			
+			working version goes here
+
+		</div>
+	</div>
+
+
+************************************************************/
+
+@import "../variables";
+
+.example-box {
+	position: relative;
+	border: 2px solid $color-brand;
+	border-radius: 5px;
+	overflow: auto;
+
+	h1:first-child,
+	h2:first-child,
+	h3:first-child,
+	h4:first-child,
+	h5:first-child,
+	h6:first-child {
+		margin-top: 0;
+		padding-top: 0;
+	}
+}
+
+.example-box--vertical .example-box__code {
+	clear: right;
+	float: none;
+	border-bottom: 2px solid $color-brand;
+	border-radius: 5px 5px 0 0;
+	border-right: 0;
+}
+
+.example-box__code {
+	position: relative;
+	margin-right: 0;
+	border-radius: 5px 0 0 5px;
+	float: left;
+	border-right: 2px solid $color-brand;
+	padding: 36px 12px 12px 12px;
+
+
+	&:after {
+		content: 'Code';
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		background-color: $color-brand;
+		color: #fff;
+
+		padding: 5px;
+		border: 2px solid $color-brand;
+		border-left-width: 0;
+		border-top-width: 0;
+		border-radius: 0 0 5px 0;
+	}
+}
+
+.example-box__example {
+	position: relative;
+	border-left: 0;
+	margin-left: 0;
+	border-radius: 0  5px 5px 0;
+	float: left;
+
+	padding: 36px 12px 12px 12px;
+
+	&:after {
+		content: 'Example';
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		background-color: $color-brand;
+		color: #fff;
+
+		padding: 5px;
+		border: 2px solid $color-brand;
+		border-left-width: 0;
+		border-top-width: 0;
+		border-radius: 0 0 5px 0;
+	}
+}
