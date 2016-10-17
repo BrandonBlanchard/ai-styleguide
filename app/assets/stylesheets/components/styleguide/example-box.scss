@@ -9,14 +9,13 @@
 	Usage:
 	<div class="example-box">
 		<div class="example-box__code">
-			<span class="example-box__label">code</span>
 			<pre class="code">
+				My html entitized code
 			</pre>
 		</div>
 
 		<div class="example-box__example">
-			<span class="example-box__label">example</span>
-			
+
 			working version goes here
 
 		</div>
@@ -24,15 +23,15 @@
 
 
 ************************************************************/
-
 @import "../../variables";
 
 .example-box {
 	position: relative;
 	border: 2px solid $color-brand;
-	border-radius: 5px;
 	overflow: auto;
 	overflow-x: hidden;
+
+	margin-bottom: $margin--vertical;
 
 	h1:first-child,
 	h2:first-child,
@@ -49,7 +48,6 @@
 	clear: right;
 	float: none;
 	border-bottom: 2px solid $color-brand;
-	border-radius: 5px 5px 0 0;
 	border-right: 0;
 	margin: 0;
 }
@@ -57,13 +55,13 @@
 .example-box__code {
 	position: relative;
 	margin-right: 0;
-	border-radius: 5px 0 0 5px;
 	float: left;
 	border-right: 2px solid $color-brand;
 	padding: 36px 12px 12px 12px;
 	overflow-x: hidden;
 	max-width: 100%;
-
+	box-sizing: border-box;
+	
 	&:after {
 		content: 'Code';
 		position: absolute;
@@ -77,7 +75,6 @@
 		border: 2px solid $color-brand;
 		border-left-width: 0;
 		border-top-width: 0;
-		border-radius: 0 0 5px 0;
 	}
 }
 
@@ -85,10 +82,9 @@
 	position: relative;
 	border-left: 0;
 	margin-left: 0;
-	border-radius: 0  5px 5px 0;
-	width: 100%;
-
-	padding: 36px 12px 12px 12px;
+	box-sizing: border-box;
+	padding: 40px 12px 12px 12px;
+	overflow: auto;
 
 	&:after {
 		content: 'Result';
@@ -103,6 +99,5 @@
 		border: 2px solid $color-brand;
 		border-left-width: 0;
 		border-top-width: 0;
-		border-radius: 0 0 5px 0;
 	}
 }

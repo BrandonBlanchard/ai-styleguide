@@ -50,12 +50,19 @@
 
 	&:hover {
 		border: none;
+		color: $color-brand;
+		background-color: darken(#fff, 10%);
 	}
 }
 
 .tab-group__tab--active {
 	background-color: #fff;
 	color: $color-brand;
+
+	&:hover {
+		background-color: #fff;
+		color: $color-brand;
+	}
 }
 
 .tab-group__content-container {
@@ -67,7 +74,7 @@
 }
 
 .tab-group__content {
-	padding: $margin--vertical $margin--horizontal;
+	padding: $margin--vertical*2 $margin--horizontal;
 	display: none;
 }
 

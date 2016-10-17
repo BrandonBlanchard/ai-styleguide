@@ -50,13 +50,13 @@
 }
 
 .grid-test{
-  background-color: #343434;
+  background-color: $color-brand;
   min-height: 50px;
   
   color: $white;
+  font-family: monospace;
   font-size: 12px;
   text-align: center;
   
   padding: 1.5em 0;
-  border-radius: 5px;
 }

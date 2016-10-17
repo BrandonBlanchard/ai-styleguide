@@ -1,0 +1,76 @@
+/**************************************************************************************
+	
+	Component:
+		toggle-box - any number of content pieces can be open at any time (within this componene)
+		toggle-box-single - only a single content piece can be open at any time (within this component)
+
+	Usage:
+
+	<div class="toggle-box" data-component="toggle-box">
+		<div class="toggle-box__toggle"> Toggle Box 1</div>
+		<div class="toggle-box__content">
+			Content Piece 1
+		</div>
+
+		<div class="toggle-box__toggle"> Toggle Box 2 </div>
+		<div class="toggle-box__content">
+			Content Piece 2
+		</div>
+	</div>
+
+
+***************************************************************************************/
+
+@import "../variables";
+
+.toggle-box {
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+.toggle-box__toggle {
+	position: relative;
+	box-sizing: border-box;
+	padding: $margin--vertical $margin--horizontal;
+	font-size: 16px;
+	font-weight: bold;
+	max-width: 100%;
+
+	cursor: pointer;
+
+	// Typically we should try to keep margins on the bottom, but here that's not really possible with the result, we're trying to achieve
+	margin-top: $margin--vertical;
+
+	background-color: $color-brand;
+	color: #fff;
+
+	&:after {
+		content: '+';
+		font-size: 20px;
+		line-height: 1;
+		position: absolute;
+		right: $margin--horizontal;
+		top: $margin--vertical;
+	}
+
+}
+
+.toggle-box__toggle--active {
+	&:after {
+		right: $margin--horizontal + 4px;
+		line-height: 0.8;
+		content: '-';
+	}
+}
+
+.toggle-box__content {
+	box-sizing: border-box;
+	border: 1px solid $color-light-gray;
+	border-top: none;
+	padding: $margin--vertical $margin--horizontal;
+	display: none;
+}
+
+.toggle-box__toggle--active+.toggle-box__content {
+	display: block;
+}

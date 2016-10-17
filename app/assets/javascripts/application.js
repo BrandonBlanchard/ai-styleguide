@@ -16,5 +16,6 @@
 //= require_tree .
 
 
-//= require components/tabs
+//= require components/tab-group
 //= require components/link-handler
+//= require components/toggle-box

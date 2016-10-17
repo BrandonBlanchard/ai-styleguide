@@ -1,25 +1,71 @@
 <h2 class="styleguide__header">Tabs</h2>
+<h4>Usage</h4>
+<p>
+	Trigger: <span class="code">data-component="tab-group"</span>	
+</p>
 
-<div data-component="tab-group" class="tab-group">
-	
-	<div class="tab-group__tabs">	
-		<a href="#tab-1" class="tab-group__tab tab-group__tab--active">Tab 1</a>
-		<a href="#tab-2" class="tab-group__tab">Tab 2</a>
-		<a href="#tab-3" class="tab-group__tab">Tab with a long name like Transgenic Characteristics</a>
+<p>
+ Tab <span class="code">href</span> is used to define the selector of the corresponding content container. In most cases this should be an id.
+</p>	
+
+
+<div class="example-box example-box--vertical">
+	<div class="example-box__code">
+<pre class="code">
+&lt;div data-component=&quot;tab-group&quot; class=&quot;tab-group&quot;&gt;
+
+	&lt;div class=&quot;tab-group__tabs&quot;&gt;	
+		&lt;a href=&quot;#tab-1&quot; class=&quot;tab-group__tab tab-group__tab--active&quot;&gt;Tab 1&lt;/a&gt;
+		&lt;a href=&quot;#tab-2&quot; class=&quot;tab-group__tab&quot;&gt;Tab 2&lt;/a&gt;
+		&lt;a href=&quot;#tab-3&quot; class=&quot;tab-group__tab&quot;&gt;Tab with a long name like Transgenic Characteristics&lt;/a&gt;
+	&lt;/div&gt;
+
+	&lt;div id=&quot;tab-1&quot; class=&quot;tab-group__content tab-group__content--active&quot;&gt;
+		&lt;h4&gt;Tab 1 Content&lt;/h4&gt;
+		
+	&lt;/div&gt;
+
+	&lt;div id=&quot;tab-2&quot; class=&quot;tab-group__content&quot;&gt;
+		&lt;h4&gt;Tab 2 Content&lt;/h4&gt;
+		
+	&lt;/div&gt;
+
+	&lt;div id=&quot;tab-3&quot; class=&quot;tab-group__content&quot;&gt;
+		&lt;h4&gt;Tab with a long name like Transgenic Characteristics&lt;/h4&gt;
+		
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
 	</div>
 
-	<div id="tab-1" class="tab-group__content tab-group__content--active">
-		<h4>Tab 1 Content</h4>
-		
-	</div>
+	<div class="example-box__example">
+		<div data-component="tab-group" class="tab-group">
+			
+			<div class="tab-group__tabs">	
+				<a href="#tab-1" class="tab-group__tab tab-group__tab--active">Tab 1</a>
+				<a href="#tab-2" class="tab-group__tab">Tab 2</a>
+				<a href="#tab-3" class="tab-group__tab">Tab with a long name like Transgenic Characteristics</a>
+			</div>
 
-	<div id="tab-2" class="tab-group__content">
-		<h4>Tab 2 Content</h4>
-		
-	</div>
+			<div id="tab-1" class="tab-group__content tab-group__content--active">
+				<h4>Tab 1 Content</h4>
+				<p>Lorem ipsum Magna quis tempor dolore et ullamco id exercitation esse laborum cillum commodo velit ad ad voluptate est dolor dolore commodo velit in incididunt labore non in esse enim ea do ex in in esse Duis eu.</p>
+			</div>
 
-	<div id="tab-3" class="tab-group__content">
-		<h4>Tab with a long name like Transgenic Characteristics</h4>
-		
+			<div id="tab-2" class="tab-group__content">
+				<h4>Tab 2 Content</h4>
+				<p>Lorem ipsum Dolor esse eu nulla eu quis ut culpa sed dolore do officia mollit elit Excepteur elit do laborum incididunt in.</p>
+			</div>
+
+			<div id="tab-3" class="tab-group__content">
+				<h4>Tab with a long name like Transgenic Characteristics</h4>
+				<p>
+					Lorem ipsum Proident elit Excepteur do dolore ullamco ut eiusmod minim Duis Ut dolor culpa incididunt do consectetur amet quis pariatur non eiusmod do deserunt ex adipisicing dolore amet ut voluptate dolore incididunt anim sint dolore reprehenderit in nulla in velit exercitation voluptate labore amet qui incididunt nulla anim esse dolore laboris Ut nulla in elit aute irure reprehenderit do ea ut adipisicing tempor reprehenderit dolor est do commodo eu enim commodo labore ut dolor elit reprehenderit consectetur esse proident ad ex minim veniam occaecat dolor do exercitation ullamco aute id laborum ut velit consectetur sint ex Ut voluptate minim elit commodo ad dolore voluptate reprehenderit dolore non laborum est Duis labore non veniam velit aliquip dolor sint eiusmod dolor ullamco proident sunt nulla id non occaecat consequat et nisi in cillum do enim aute Excepteur labore et cillum cillum commodo eu minim fugiat fugiat dolor.
+				</p>
+				
+			</div>
+		</div>
+
 	</div>
 </div>
