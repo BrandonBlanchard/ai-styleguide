@@ -24,4 +24,6 @@ Rails.application.routes.draw do
     get '/core/colors' => 'core#colors', :as => :colors
 
     get '/core/link-handler' => 'core#link_handler', :as => :link_handler
+
+    get '/core/tabs' => 'core#tabs', :as => :tabs
 end

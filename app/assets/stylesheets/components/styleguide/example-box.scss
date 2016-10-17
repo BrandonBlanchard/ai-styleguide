@@ -25,13 +25,14 @@
 
 ************************************************************/
 
-@import "../variables";
+@import "../../variables";
 
 .example-box {
 	position: relative;
 	border: 2px solid $color-brand;
 	border-radius: 5px;
 	overflow: auto;
+	overflow-x: hidden;
 
 	h1:first-child,
 	h2:first-child,
@@ -50,6 +51,7 @@
 	border-bottom: 2px solid $color-brand;
 	border-radius: 5px 5px 0 0;
 	border-right: 0;
+	margin: 0;
 }
 
 .example-box__code {
@@ -59,7 +61,8 @@
 	float: left;
 	border-right: 2px solid $color-brand;
 	padding: 36px 12px 12px 12px;
-
+	overflow-x: hidden;
+	max-width: 100%;
 
 	&:after {
 		content: 'Code';
@@ -83,12 +86,12 @@
 	border-left: 0;
 	margin-left: 0;
 	border-radius: 0  5px 5px 0;
-	float: left;
+	width: 100%;
 
 	padding: 36px 12px 12px 12px;
 
 	&:after {
-		content: 'Example';
+		content: 'Result';
 		position: absolute;
 		top: 0;
 		left: 0;

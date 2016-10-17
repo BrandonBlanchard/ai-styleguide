@@ -1,0 +1,76 @@
+/*****************************************************************
+	Component: 
+		Tab Group
+
+	Usage: 
+		<div data-component="tab-group" class="tabs">
+	
+			<div class="tab-group__tab" data-target=".tab-1">Tab 1</div>
+			<div class="tab-group__tab" data-target=".tab-2">Tab 2</div>
+			
+			<div class="tab-group__content-container">
+				<div class="tab-group__content tab-1">
+					<h4>Tab 1 Content</h4>
+				</div>
+
+				<div class="tab-group__content tab-2">
+					<h4>Tab 2 Content</h4>
+				</div>
+			</div>
+		</div>
+
+*******************************************************************/
+@import "../variables";
+
+.tab-group {
+	overflow: auto;
+	padding: 5px;
+	border: 1px solid $color-light-gray;
+}
+
+.tab-group__tabs {
+	background-color: $color-brand;
+	overflow: auto;
+	padding: 0px 6px 0 6px;
+}
+
+.tab-group__tab {
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	padding: 10px $margin--horizontal;
+	background-color: darken($color-brand, 10%);
+	min-width: 100px;
+	margin-right: 5px;
+	margin-top: 5px;
+
+	color: #fff;
+	text-align: center;
+	line-height: 1.2;
+
+	&:hover {
+		border: none;
+	}
+}
+
+.tab-group__tab--active {
+	background-color: #fff;
+	color: $color-brand;
+}
+
+.tab-group__content-container {
+	border-top: 2px solid $color-brand;
+	clear: both;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.tab-group__content {
+	padding: $margin--vertical $margin--horizontal;
+	display: none;
+}
+
+.tab-group__content--active {
+	display: block;
+}

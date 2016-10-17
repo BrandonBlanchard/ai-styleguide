@@ -1,6 +1,94 @@
-<h2 class="styleguide__header">Block Element Modifier</h2>
+<h2 class="styleguide__header">BEM - Block__Element--Modifier</h2>
 
-<h4>What is BEM?</h4>
 <div class="span--8">
-    BEM stands for Block Element Modifier and is a convention for naming and organizing stylesheets.
+<h4>What is BEM?</h4>
+    BEM is a simple naming convention for CSS classes that helps avoid specificity collisions, encourages clean code, and falls in line with the component based future of the web.
+</div>
+
+<div class="span--8">
+<h4>How do I use BEM?</h4>
+	
+	<p>
+	Usage is rather simple. Start with a component, a content box, a widget, or some 'piece' of a page. That piece is your <span class="code">block</span>, every piece that is a member of the <span class="code">block</span> is an <span class="code">element</span>. This is written <span class="code">.block__element</span>.
+	</p>
+	<p>
+		In the below example the <span class="code">.header-box</span> is our block, the <span class="code">.header-box__header</span> and <span class="code">.header-box__content</span> are child elements.
+	</p>
+
+<div class="example-box example-box--vertical ">
+	<div class="example-box__code">
+		<pre class="code">
+&lt;div class=&quot;header-box span--12&quot;&gt;
+	&lt;div class=&quot;header-box__header&quot;&gt;
+		My header
+	&lt;/div&gt;
+	&lt;div class=&quot;header-box__content&quot;&gt;
+		Some content
+	&lt;/div&gt;	
+&lt;/div&gt;	
+		</pre>
+	</div>
+	<div class="example-box__example">
+		<div class="header-box span--12">
+			<div class="header-box__header">
+				My header
+			</div>
+			<div class="header-box__content">
+				Some content
+			</div>	
+		</div>	
+	</div>
+</div>
+
+<h4>Modifiers</h4>
+<p>
+	A <span class="code">modifier</span> is a modification on either a <span class="code">block</span> or <span class="code">element</span> it's usually a small change like making a list horizontal or vertical. This is written <span class="code">.block__element--modifier</span> or <span class="code">.block--modifier</span>.
+</p>
+<p>
+	 In the below example we've used the <span class="code">.header-box__content--no-pad</span> modifier to remove the padding inside the content area of the <span class="code">.header-box__content</span>.
+</p>
+
+<div class="example-box example-box--vertical">
+	<div class="example-box__code">
+		<pre class="code">
+&lt;div class=&quot;header-box span--12&quot;&gt;
+	&lt;div class=&quot;header-box__header&quot;&gt;
+		My header
+	&lt;/div&gt;
+	&lt;div class=&quot;header-box__content header-box__content--no-pad&quot;&gt;
+		Some content
+	&lt;/div&gt;	
+&lt;/div&gt;	
+		</pre>
+	</div>
+	<div class="example-box__example">
+		<div class="header-box span--12">
+			<div class="header-box__header">
+				My header
+			</div>
+			<div class="header-box__content header-box__content--no-pad">
+				I have no padding!
+			</div>	
+		</div>	
+	</div>
+</div>
+	<div class="span--6">
+		<h4>Rules</h4>
+		<p>
+			Here are a few basic rules that should help when implementing content using bem
+		</p>
+		<ul>
+			<li>An <span class="code">element</span> is always a child of a <span class="code">block</span></li>
+			<li>An <span class="code">element</span> is never the child of another <span class="code">element</span></li>
+			<li>A <span class="code">block</span> can never be the child of a <span class="code">block</span> or <span class="code">element</span></li>
+		</ul>
+	</div>
+
+	<div class="span--6">
+		<h4>Reference Link</h4>
+		<ul>
+			<li> <a href="http://getbem.com/">get bem</a> </li>
+			<li> <a href="https://en.bem.info/methodology/quick-start/"> b_</a> </li>
+		</ul>
+	</div>
 </div>
