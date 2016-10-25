@@ -24,14 +24,23 @@
 
 .tab-group {
 	overflow: auto;
-	padding: 5px;
 	border: 1px solid $color-light-gray;
 }
 
 .tab-group__tabs {
 	background-color: $color-brand;
 	overflow: auto;
-	padding: 0px 6px 0 6px;
+	position: relative;	
+}
+
+.tab-group__tab-active-marker {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 3px;
+	min-width: 60px;
+	background-color: yellow; // use a different color
+	transition: left ease 375ms, width ease 375ms;
 }
 
 .tab-group__tab {
@@ -39,29 +48,14 @@
 	display: inline-block;
 	float: left;
 	padding: 10px $margin--horizontal;
-	background-color: darken($color-brand, 10%);
 	min-width: 100px;
-	margin-right: 5px;
-	margin-top: 5px;
 
 	color: #fff;
 	text-align: center;
 	line-height: 1.2;
 
 	&:hover {
-		border: none;
-		color: $color-brand;
-		background-color: darken(#fff, 10%);
-	}
-}
-
-.tab-group__tab--active {
-	background-color: #fff;
-	color: $color-brand;
-
-	&:hover {
-		background-color: #fff;
-		color: $color-brand;
+		border-bottom: none;
 	}
 }
 

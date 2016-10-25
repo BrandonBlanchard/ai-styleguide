@@ -12,22 +12,37 @@
 	$(document).on('click', '[data-component="tab-group"] .tab-group__tab', onTabClicked);
 
 	function onTabClicked(e) {
-		var $target,
-			$tabsInGroup;
+		var $tabsInGroup,
+			$target = $(e.target),
+			$activeContent = $($target.attr('href'));
 
 		// Hide all tab content
-		$j(e.target).parent().parent().children('.tab-group__content').removeClass('tab-group__content--active');
+		$target.parent('.tab-group__tabs').parent('.tab-group').children('.tab-group__content').removeClass('tab-group__content--active');
 
 		// Deactivate all tabs
-		$j(e.target).parent().children('.tab-group__tab').removeClass('tab-group__tab--active');
+		$target.parent().children('.tab-group__tab').removeClass('tab-group__tab--active');
 
 		// Activate current tab
-		$j(e.target).addClass('tab-group__tab--active');
+		if($target.hasClass('.tab-group__tab')){
+			$target.addClass('tab-group__tab--active');
+		} else {
+			$target.parent('.tab-group__tab').addClass('tab-group__tab--active');
+		}
 
 		// Activate current tab content
-		$j($j(e.target).attr('href')).addClass('tab-group__content--active');
+		$activeContent.addClass('tab-group__content--active');
+
+		moveActiveMarker($target.parent('.tab-group__tabs'), $target);
 
 		// Prevent bubbling
-		return false;
+		e.preventDefault();
 	}
+
+	function moveActiveMarker($tabGroupTabs, $activeTab) {
+		let leftPos = $activeTab.position().left,
+			width = $activeTab.outerWidth();
+
+		$tabGroupTabs.children('.tab-group__tab-active-marker').css({'left': leftPos, 'width': width });
+	}
+
 })();

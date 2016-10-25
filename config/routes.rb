@@ -26,4 +26,6 @@ Rails.application.routes.draw do
     get '/core/link-handler' => 'core#link_handler', :as => :link_handler
 
     get '/core/tabs' => 'core#tabs', :as => :tabs
+
+    get '/core/buttons' => 'core#buttons', :as => :buttons
 end

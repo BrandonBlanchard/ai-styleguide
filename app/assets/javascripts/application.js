@@ -19,3 +19,4 @@
 //= require components/tab-group
 //= require components/link-handler
 //= require components/toggle-box
+//= require effects/ripple

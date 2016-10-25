@@ -54,4 +54,8 @@ class CoreController < ApplicationController
     render 'link-handler'
   end
 
+  def buttons
+    render 'buttons'
+  end
+
 end

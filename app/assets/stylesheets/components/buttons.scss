@@ -1,0 +1,82 @@
+/*********************************************************************************************
+	
+	Component:
+		Buttons
+
+
+
+*********************************************************************************************/
+@import "../variables";
+@import "../effects/ripple";
+
+.button {
+	box-sizing: border-box;
+	padding: $margin--vertical $margin--horizontal;
+	background-color: $color-light-gray;
+	display: inline-block;
+	color: #fff;
+	border-radius: 2px;
+	cursor: pointer;
+
+	@extend .ripple;
+
+	&:hover {
+		background-color: lighten($color-light-gray, 5%);
+		border-bottom: none;
+	}
+}
+
+.button--primary {
+	background-color: $color-brand;
+
+	&:hover {
+		background-color: lighten($color-brand, 5%);
+		border-bottom: none;
+	}
+}
+
+.button--secondary {
+	background-color: $color-green;
+
+	&:hover {
+		background-color: lighten($color-green, 5%)
+	}
+}
+
+.button--compact {
+	padding: $margin--vertical / 2 $margin--horizontal / 2;
+}
+
+.button--stack {
+	border-top: 1px solid #fff;
+	border-radius: 0;
+	display: block;	
+}
+
+.button--download:after {
+		content: '\f019';
+		font: normal normal normal 14px/1 FontAwesome;
+		margin-left: 10px;
+}
+
+.button[rel="external"]:after {
+	content: '\f08e';
+	font: normal normal normal 14px/1 FontAwesome;
+	margin-left: 10px;
+}
+
+
+.button--disabled {
+	background-color: $color-dark-gray;
+	color: $color-light-gray;
+	cursor: not-allowed;
+
+	.ink {
+		display: none;
+	}
+
+	&:hover {
+		background-color: $color-dark-gray;
+		color: $color-light-gray;
+	}
+}

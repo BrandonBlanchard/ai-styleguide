@@ -1,0 +1,125 @@
+/********************************************************************************
+  Lil Bobby Tables
+********************************************************************************/
+@import "../variables";
+
+.horizontal-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+  font-family: $font-family-sans-serif;
+  box-sizing: border-box;
+  border: 1px solid $color-dark-gray;
+}
+
+// Used to ensure a table correctly fills a header-box
+// no weird spacing around the edges and no double borders
+.horizontal-table--fill-box {
+  width: calc(100% + 3px);
+  border: none;
+  margin-left: -1px;
+  margin-right: -3px;
+  margin-bottom: -1px;
+}
+
+/*
+<tr>
+  <td class="horizontal-table__section-header">My sub-header </td>
+</tr>
+*/
+
+.horizontal-table__section-header{
+  font-weight: bold;
+  background-color: $color-dark-blue;
+  color: $white;
+  padding: 6px $margin--horizontal;
+}
+
+.horizontal-table__label,
+.horizontal-table__data {
+  padding: 6px 4px;
+}
+
+.horizontal-table__label--wide {
+  min-width: 140px;
+}
+
+.horizontal-table__label {
+  border-left: 1px solid $color-dark-gray;
+  border-right: 1px solid $color-dark-gray;
+  border-top: 1px solid $color-dark-gray;
+  border-bottom: 1px solid $color-dark-gray;
+  background-color: $color-light-gray;
+}
+
+.horizontal-table__data {
+  border: 1px solid $color-dark-gray;
+  font-weight: normal;
+}
+
+.basic-table {
+  border: 1px solid $color-dark-gray;
+  border-collapse: collapse;
+
+  td {
+    border: 1px solid $color-dark-gray;
+    padding: 6px 7px;
+  }
+}
+
+.basic-table__header {
+  background-color: $color-light-gray;
+
+  td {
+    padding: 6px 7px;
+  }
+}
+
+.basic-table__header--blue {
+  background-color: $color-dark-blue;
+  color: $white;
+}
+
+.basic-table__header--brand {
+  background-color: $color-brand;
+  color: $white;
+}
+
+
+table {
+  .w--10 {
+    width: 10%;
+  }
+
+  .w--20 {
+    width: 20%;
+  }
+
+  .w--30 {
+    width: 30%;
+  }
+
+  .w--40 {
+    width: 40%;
+  }
+
+  .w--50 {
+    width: 50%;
+  }
+
+  .w--60 {
+    width: 60%;
+  }
+
+  .w--70 {
+    width: 70%;
+  }
+
+  .w--80 {
+    width: 80%;
+  }
+
+  .w--90 {
+    width: 90%;
+  }
+}

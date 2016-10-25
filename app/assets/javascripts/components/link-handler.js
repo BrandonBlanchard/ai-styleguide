@@ -34,7 +34,7 @@ intent:
 	$j(document).on('click', '[data-component="popout-link"]', openLink);
 
 	function openLink(event){
-		var $target = $j(event.target),
+		let $target = $j(event.target),
 			urlToOpen = $target.attr('href'),
 			options = $target.data('args'),
 			name = $target.data('name');

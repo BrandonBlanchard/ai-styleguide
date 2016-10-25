@@ -9,11 +9,11 @@ a styleguide specific component
 @import "../../variables";
 
 .color-box {
-    border-radius: 5px;
     border: 2px solid $color-brand;
     overflow: hidden;
     color: #fff;
     transition: border-color 0.5s;
+    height: 65px;
 }
 
 .color-box:hover {
@@ -28,6 +28,7 @@ a styleguide specific component
     font-size: 12px;
     text-align: left;
     width: 60%;
+    height: 100%;
     background-color: $color-brand;
     transition: background-color 0.5s;
     padding: 0.5em 1em;
@@ -44,9 +45,13 @@ a styleguide specific component
 }
 
 .color--brand {
-    background-color: #0779be;
+    background-color: $color-brand;
 }
 
 .color--light-gray {
     background-color: $color-light-gray;
+}
+
+.color--dark-gray {
+    background-color: $color-dark-gray;
 }

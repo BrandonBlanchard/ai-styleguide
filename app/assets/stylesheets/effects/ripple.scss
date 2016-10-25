@@ -1,0 +1,42 @@
+/*************************************************************************
+
+Material Design Ripple Effect
+
+**************************************************************************/
+@import "../variables";
+
+.ink {
+	display: block; 
+	position: absolute;
+	background-color: rgba(109, 112, 112, 0.4);
+	border-radius: 100%;
+	transform: scale(0);
+	opacity: 40;
+	max-width: 300px;
+	max-height: 300px;
+}
+
+.ink.animate {
+	animation: ripple 375ms linear;
+}
+
+@keyframes ripple {
+	0% { background-color: rgba(255, 255, 255, 0.4); }
+	100% { 
+		background-color: rgba(255, 255, 255, 0); 
+		transform: scale(2.5); 
+	}
+}
+
+
+.ripple {
+	position: relative;
+	overflow: hidden;
+}
+
+
+
+
+
+
+

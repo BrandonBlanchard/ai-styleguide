@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 </head>
 <body>
 <div class="chrome"></div>
@@ -60,6 +61,11 @@
                     <%= link_to 'Media Object', mediaObject_path %>
                 </li>
 
+                <li class="link-block__link">
+                    <%= link_to 'Buttons', buttons_path %>
+                </li>
+
+
                 <li>
                     <h4>Core Js</h4>
                 </li>
@@ -74,6 +80,10 @@
 
                 <li class="link-block__link">
                     <%= link_to 'Toggle box', toggleBox_path %>
+                </li>
+
+                <li>
+                    <h4>Useful bits</h4>
                 </li>
 
             </ul>

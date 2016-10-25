@@ -29,7 +29,7 @@
 
 	// Handles cases where many toggle-boxes can be open
 	function onToggleMulti(e){
-		var $target = $j(e.target);
+		let $target = $j(e.target);
 
 		if($target.hasClass('toggle-box__toggle--active')){
 			$target.removeClass('toggle-box__toggle--active');

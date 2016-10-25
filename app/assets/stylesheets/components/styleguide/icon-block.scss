@@ -1,0 +1,40 @@
+/********************************************************************************************
+
+	Styleguide Component:
+		Icon Block
+
+		<div class="icon-block">
+			<div class="icon-block__class">icon class</div>
+			<i class="some-icon"/>
+		</div>
+
+**********************************************************************************************/
+
+@import "../../variables";
+
+.icon-block {
+	border: 2px solid $color-brand;
+	
+	i {
+		width: 15%;
+		box-sizing: border-box;
+		float: left;
+		margin-top: 5px;
+	}
+
+	i:before {
+		width: 100%;
+		font-size: 25px;
+		float: left;
+		text-align: center;
+	}
+}
+
+.icon-block__class {
+	float: left;
+	width: 80%;
+	background-color: $color-brand;
+	color: #fff;
+	padding: 8px 5px;
+	height: 100%;
+}
