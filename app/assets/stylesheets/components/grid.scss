@@ -11,6 +11,10 @@
 
 
 ******************************************************************************************/
+*{
+ box-sizing: border-box; 
+}
+
 
 @for $i from 1 through $cols {
 
@@ -18,6 +22,7 @@
       width: ($column-width * $i) + ($column-gutter * ($i - 1));
       margin-right: $column-gutter;
       margin-bottom: $margin--vertical;
+      margin-top: 0;
       box-sizing: border-box;
       overflow-x: hidden;
       float: left;
@@ -31,6 +36,7 @@
 
 .row {
   overflow: auto;
+  margin-bottom: $margin--vertical;
 }
 
 .break {
@@ -39,6 +45,10 @@
 
 .expand {
   margin-bottom: $margin--vertical !important;
+}
+
+.expand--double {
+  margin-bottom: $margin--vertical * 2 !important;
 }
 
 .collapse {

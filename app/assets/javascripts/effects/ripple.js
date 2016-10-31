@@ -10,7 +10,7 @@ Material Design Ripple Effect
 	var ink = false,
 		parent = $j(document);
 
-	$j(document).on('click', '.ripple, .button', ripple);
+	$j(document).on('click', '.ripple, .button, .modal__backdrop, .toggle-box__toggle, .tab-group__tab', ripple);
 
 	function ripple(e) {
 		var x = 0,
@@ -30,7 +30,7 @@ Material Design Ripple Effect
 			ink.addClass('ink');
 		}
 
-		size = Math.min(Math.max($target.outerWidth(), $target.outerHeight()), 300);
+		size = Math.min(Math.max($target.outerWidth() + 10, $target.outerHeight() + 10), 300);
 		x = e.pageX - $target.offset().left - size/2;
 		y = e.pageY - $target.offset().top - size/2;
 

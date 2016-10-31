@@ -58,4 +58,12 @@ class CoreController < ApplicationController
     render 'buttons'
   end
 
+  def modal
+    render 'modal'
+  end
+
+  def input
+    render 'input-elements'
+  end
+
 end

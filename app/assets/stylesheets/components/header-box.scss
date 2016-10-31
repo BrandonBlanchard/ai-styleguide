@@ -13,7 +13,6 @@ Usage:
 ************************************************************/
 
 .header-box {
-  border: 1px solid $color-light-gray;
   margin-bottom: $margin--vertical;
   overflow-y: hidden;
 }
@@ -25,12 +24,18 @@ Usage:
   line-height: 1.2;
   padding: $margin--vertical $margin--horizontal;
   margin: 0;
-  box-sizing: border-box;
   width: 100%;
 }
 
+.header-box__header-tools {
+  float: right;
+}
+
 .header-box__content {
+  border: 1px solid $color-light-gray;
+  border-top-width: 0;
   padding: $margin--horizontal;
+  width: 100%;
 }
 
 .header-box__content--no-pad {

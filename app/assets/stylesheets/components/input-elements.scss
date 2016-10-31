@@ -1,0 +1,271 @@
+/*************************************************************************
+
+	Input Elments
+
+**************************************************************************/
+
+@import "../variables";
+@import "../effects/ripple";
+
+label{
+	margin-bottom: $margin--vertical;
+	position: relative;
+}
+
+.checkbox--stacked.checkbox {
+	margin-top: 0;
+	display: block;
+	float: none;
+	clear: both;
+}
+
+/****************
+
+	Check boxes
+
+****************/
+
+input[type="checkbox"] {
+	visibility: hidden;
+	display: none;
+	height: 0;
+	width: 0;
+}
+
+input[type="checkbox"] + .checkbox {
+	margin-left: 22px;
+	padding-left: 0;
+	position: relative;
+	z-index: 250;
+}
+
+input[type="checkbox"] + .checkbox:before {
+	box-sizing: border-box;
+	content: ' ';
+	position: absolute;
+	top: 0;
+	left: -20px;
+	display: block;
+	width: 16px;
+	height: 16px;
+	border: 2px solid $color-light-gray;
+	border-radius: 2px;
+	transition: background-color 75ms linear;
+    font: normal normal normal 12px/1 FontAwesome;
+	color: #fff;
+	z-index: 250;
+}
+
+input[type="checkbox"]:checked + .checkbox:before {
+	content: '\f00c';
+	border-color: $color-brand;
+	background-color: $color-brand;
+	text-align: center;
+}
+
+/**************
+
+	Radio
+
+**************/
+
+.radio--stacked.radio {
+	margin-top: 0;
+	display: block;
+	float: none;
+	clear: both;
+}
+
+input[type="radio"] {
+	@extend .ripple;
+	display: none;
+	visibility: hidden;
+}
+
+input[type="radio"] + .radio {
+	margin-left: 22px;
+	position: relative;
+	z-index: 250;
+}
+
+input[type="radio"] + .radio:before {
+	box-sizing: border-box;
+	content: ' ';
+	position: absolute;
+	top: 0;
+	left: -20px;
+	display: block;
+	width: 16px;
+	height: 16px;
+	border: 2px solid $color-light-gray;
+	border-radius: 50%;
+	transition: background-color 175ms linear, border-width 75ms linear;
+	color: #fff;
+	z-index: 250;
+}
+
+input[type="radio"]:checked + .radio:before {
+	content: '\f00c';
+	border-color: $color-brand;
+	background-color: $color-brand;
+	font: normal normal normal 12px/1 FontAwesome;
+}
+
+/****************
+
+	Input Text
+
+****************/
+
+input[type="text"]:focus {
+	outline: none;
+	border-color: $color-brand;
+}
+
+input[type="text"] {
+	width: 100%;
+	border: 2px solid $color-light-gray;
+	border-radius: 2px;
+	padding: 5px 8px;
+	font-size: $font-size-base;
+	color: $color-brand-dark-gray;
+	transition: border-color 275ms linear;
+	margin-bottom: $margin--vertical*2;
+}
+
+.text--valid:before,
+.text--invalid:before,
+.text--validating:before {
+	content: '';
+	position: absolute;
+	font: normal normal normal 16px/1 FontAwesome;
+	bottom: 0px;
+	right: 8px;
+}
+
+.text--valid:before {
+	content: '\f00c';
+	color: $color-green;
+}
+
+.text--invalid:before {
+	content: '\f00d';
+	color: $color-brand-red;
+}
+
+.text--validating:before {
+	content: '\f110';
+	color: $color-brand-yellow;
+	animation: spin 1s infinite steps(8);
+}
+
+.text--valid input[type="text"] {
+	border-color: $color-green;
+}
+
+.text--invalid input[type="text"] {
+	border-color: $color-brand-red;
+}
+
+
+
+
+
+/****************
+
+	TextArea
+
+****************/
+
+textarea {
+	width: 100%;
+	max-width: 100%;
+	border: 2px solid $color-light-gray;
+	border-radius: 2px;
+	padding: 5px 8px;
+	font-size: $font-size-base;
+	color: $color-brand-dark-gray;
+	transition: border-color 275ms linear;
+	margin-bottom: $margin--vertical*2;
+}
+
+textarea:focus {
+	outline: none;
+	border-color: $color-brand;
+}
+
+
+/******************
+
+	Toggle
+
+******************/
+
+
+input[type="checkbox"] + .toggle-input {
+	padding-left: 45px;
+	position: relative;
+	margin-bottom: $margin--vertical + 2px;
+	display: inline-block;
+}
+
+input[type="checkbox"] + .toggle-input:before {
+	content: '';
+	position: absolute;
+	border: 2px solid $color-light-gray;
+	border-radius: 20px;
+	display: block;
+	width: 35px;
+	height: 20px;
+	left: -75px;
+	top: -2px;
+	left: 2px;
+	transition: border-color 275ms linear;
+}
+
+input[type="checkbox"] + .toggle-input:after {
+	content: '\f00d';
+	width: 18px;
+	height: 18px;
+	background-color: $color-light-gray;
+	position: absolute;
+	top: 1px;
+	left: 6px;
+	border-radius: 50%;
+	transition: background-color 375ms linear, left 175ms linear, transform 175ms linear ;
+	color: #fff;
+	font: normal normal normal 12px/1.5 FontAwesome;
+	text-align: center;
+	transform: rotate(-90deg);
+}
+
+input[type="checkbox"]:checked + .toggle-input:before {
+	border-color: $color-brand;
+}
+
+input[type="checkbox"]:checked + .toggle-input:after {
+	left: 19px;
+	background-color: $color-brand;
+	content: '\f00c';
+	transform: rotate(0deg);
+}
+
+
+input[type="checkbox"] + .toggle--right {
+	padding-left: 0;
+	padding-right: 44px;
+}
+
+input[type="checkbox"] + .toggle-input.toggle--right:before {
+	left: calc(100% - 40px);
+}
+
+input[type="checkbox"] + .toggle-input.toggle--right:after {
+	left: calc(100% - 36px);
+}
+
+input[type="checkbox"]:checked + .toggle-input.toggle--right:after {
+	left: calc(100% - 23px);
+}
+
+

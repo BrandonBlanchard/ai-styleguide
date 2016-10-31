@@ -1,0 +1,82 @@
+<h2 class="styleguide__header">Loaders</h2>
+
+<div class="row">
+	<div class="span--8">
+	<h3>Loader</h3>
+	<p>
+		There are two loader variations: the default Brain Science loader (example 1) and the Cell Science loader (example 2). Both use the modifiers <code>.loader--animate</code> and <code>.loader--complete</code>.
+	</p>
+
+	<p>
+		<code>.loader--animate</code> will loop until removed or replaced with <code>.loader--complete</code>. Make sure you leave about 500ms after your loading has been completed for the animations to finish before hiding the loader.
+	</p>
+		<div class="example-box">
+			<div class="example-box__code">
+				<pre class="code">
+
+&lt;div class=&quot;loader&quot; data-load-text=&quot;loading&quot;&gt;
+	&lt;div class=&quot;loader__progress&quot;&gt;
+		&lt;div class=&quot;loader__progress-one&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;loader__progress-two&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;loader__overlay&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+				</pre>
+			</div>
+		
+			<div class="example-box__example">
+			
+				<div class="loader example-loader-1" data-load-text="loading">
+					<div class="loader__progress">
+						<div class="loader__progress-one"></div>
+						<div class="loader__progress-two"></div>
+					</div>
+					<div class="loader__overlay"></div>
+				</div>
+
+				<a href=".example-loader-1" class="button fa fa-play loader-demo--play"></a>
+				<a href=".example-loader-1" class="button fa fa-refresh loader-demo--reset"></a>
+						
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="span--8">
+		<div class="example-box">
+			<div class="example-box__code">
+				<pre class="code">
+
+&lt;div class=&quot;loader loader--aics&quot; data-load-text=&quot;loading&quot;&gt;
+	&lt;div class=&quot;loader__progress&quot;&gt;
+		&lt;div class=&quot;loader__progress-one&quot;&gt;&lt;/div&gt;
+		&lt;div class=&quot;loader__progress-two&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;loader__overlay&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+				</pre>
+			</div>
+		
+			<div class="example-box__example">
+			
+				<div class="loader loader--aics example-loader-2" data-load-text="loading">
+					<div class="loader__progress">
+						<div class="loader__progress-one"></div>
+						<div class="loader__progress-two"></div>
+					</div>
+					<div class="loader__overlay"></div>
+				</div>
+						
+				<a href=".example-loader-2" class="button fa fa-play loader-demo--play"></a>
+				<a href=".example-loader-2" class="button fa fa-refresh loader-demo--reset"></a>
+			</div>
+		</div>
+
+
+	</div>
+</div>

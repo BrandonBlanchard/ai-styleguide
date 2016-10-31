@@ -23,71 +23,33 @@
     <div class="span--2 side-bar-nav">
         <h2 class="side-bar-nav__header"> Navigation </h2>
         <div class="side-bar-nav__content">
+           <div class="toggle-box" data-component="toggle-box">
+                <div class="toggle-box__toggle toggle-box__toggle--active collapse-top"> Layout </div>
+                <div class="toggle-box__content toggle-box__content--no-pad">
+                    <%= link_to 'BEM', bem_path, class: "button button--stack" %>
+                    <%= link_to 'Grid', grid_path, class: "button button--stack" %>
+                    <%= link_to 'Typography', typography_path, class: "button button--stack"  %>
+                    <%= link_to 'Colors', colors_path, class: "button button--stack"  %>
+                </div>
+                <div class="toggle-box__toggle toggle-box__toggle--active collapse-top"> Components </div>
+                <div class="toggle-box__content toggle-box__content--no-pad">
+                    <%= link_to 'Header box', headerBox_path, class: "button button--stack" %>
+                    <%= link_to 'Toggle box', toggleBox_path, class: "button button--stack"  %>
+                    <%= link_to 'Tabs', tabs_path, class: "button button--stack"  %>
+                    <%= link_to 'Icons', icons_path, class: "button button--stack"  %>
+                    <%= link_to 'Buttons', buttons_path, class: "button button--stack" %>
+                    <%= link_to 'Input Elements', input_elements_path, class: "button button--stack" %>
+                    <%= link_to 'Loaders', loaders_path, class: "button button--stack" %>
+                    <%= link_to 'Media Object', mediaObject_path, class: "button button--stack" %>
+                </div>
 
-            <ul class="link-block">
-                <li>
-                    <h4 class="collapse-top">Methodologies</h4>
-                </li>
-
-                <li class="link-block__link ">
-                    <%= link_to 'BEM', bem_path %>
-                </li>
-
-                <li>
-                    <h4 class="collapse-top">Core Css</h4>
-                </li>
-
-                <li class="link-block__link ">
-                    <%= link_to 'Grid', grid_path %>
-                </li>
-
-                <li class="link-block__link">
-                    <%= link_to 'Typography', typography_path %>
-                </li>
-
-                <li class="link-block__link">
-                    <%= link_to 'Colors', colors_path %>
-                </li>
-
-                <li class="link-block__link">
-                    <%= link_to 'Icons', icons_path %>
-                </li>
-
-                <li class="link-block__link">
-                    <%= link_to 'Header box', headerBox_path %>
-                </li>
-
-                <li class="link-block__link">
-                    <%= link_to 'Media Object', mediaObject_path %>
-                </li>
-
-                <li class="link-block__link">
-                    <%= link_to 'Buttons', buttons_path %>
-                </li>
-
-
-                <li>
-                    <h4>Core Js</h4>
-                </li>
-
-                <li class="link-block__link">
-                    <%= link_to 'Link Handler', link_handler_path  %>
-                </li>
-
-                <li class="link-block__link">
-                    <%= link_to 'Tabs', tabs_path %>
-                </li>
-
-                <li class="link-block__link">
-                    <%= link_to 'Toggle box', toggleBox_path %>
-                </li>
-
-                <li>
-                    <h4>Useful bits</h4>
-                </li>
-
-            </ul>
-
+                <div class="toggle-box__toggle toggle-box__toggle--active collapse-top"> Utilities </div>
+                <div class="toggle-box__content toggle-box__content--no-pad">
+                    <%= link_to 'Modal', modal_path, class: "button button--stack"   %>
+                    <%= link_to 'Link Handler', link_handler_path, class: "button button--stack"   %>
+                    
+                </div>
+            </div>
         </div>
     </div>    
     <div class="span--10">

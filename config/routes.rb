@@ -28,4 +28,10 @@ Rails.application.routes.draw do
     get '/core/tabs' => 'core#tabs', :as => :tabs
 
     get '/core/buttons' => 'core#buttons', :as => :buttons
+
+    get '/core/modal' => 'core#modal', :as => :modal
+
+    get '/core/loaders' => 'core#loader', :as => :loaders
+
+    get '/core/input-elements' => 'core#input', :as => :input_elements
 end

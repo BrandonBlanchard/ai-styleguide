@@ -30,7 +30,6 @@
 	border: 2px solid $color-brand;
 	overflow: auto;
 	overflow-x: hidden;
-
 	margin-bottom: $margin--vertical;
 }
 
@@ -42,6 +41,10 @@
 	margin: 0;
 }
 
+.example-box--vertical .example-box__example {
+	border-left-width: 0;
+}
+
 .example-box__code {
 	position: relative;
 	margin-right: 0;
@@ -51,6 +54,8 @@
 	overflow-x: hidden;
 	max-width: 100%;
 	box-sizing: border-box;
+	margin-right: -2px;
+	
 	
 	&:after {
 		content: 'Code';
@@ -75,6 +80,8 @@
 	box-sizing: border-box;
 	padding: 40px 12px 12px 12px;
 	overflow: auto;
+
+	border-left: 2px solid $color-brand;
 
 	&:after {
 		content: 'Result';

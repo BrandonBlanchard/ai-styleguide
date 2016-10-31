@@ -2,9 +2,6 @@
 	Component:
 		Tab-Group
 
-	Usage: 
-
-
 **********************************************************************************/
 
 (function(){
@@ -44,5 +41,16 @@
 
 		$tabGroupTabs.children('.tab-group__tab-active-marker').css({'left': leftPos, 'width': width });
 	}
+
+	function init() {
+		var $tabGroupTabContainer = $j('.tab-group__tabs');
+
+		for(let i = 0; i < $tabGroupTabContainer.length; i++){
+			let active = $($tabGroupTabContainer[i]).children('.tab-group__tab--active');
+			moveActiveMarker($($tabGroupTabContainer[i]), $(active));
+		}
+	}
+
+	$j(document).on('turbolinks:load', init);
 
 })();

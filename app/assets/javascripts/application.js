@@ -19,4 +19,8 @@
 //= require components/tab-group
 //= require components/link-handler
 //= require components/toggle-box
+//= require components/modal
 //= require effects/ripple
+
+// DEMO ONLY, DO NOT INCLUDE IN REAL SITES
+ //= require demo-scripts/loader-demo

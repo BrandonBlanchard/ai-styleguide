@@ -21,10 +21,13 @@
 
 *******************************************************************/
 @import "../variables";
+@import "../effects/ripple";
 
 .tab-group {
+	position: relative;
 	overflow: auto;
 	border: 1px solid $color-light-gray;
+	transition: height 375ms linear;
 }
 
 .tab-group__tabs {
@@ -37,10 +40,25 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	height: 3px;
 	min-width: 60px;
-	background-color: yellow; // use a different color
+	background-color: #fff; // use a different color
 	transition: left ease 375ms, width ease 375ms;
+
+	&:after {
+		content: ' ';
+		bottom: 100%;
+		left: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-color: rgba(255, 255, 255, 0);
+		border-bottom-color: #fff;
+		border-width: 8px;
+		margin-left: -8px;
+	}
 }
 
 .tab-group__tab {
@@ -49,10 +67,12 @@
 	float: left;
 	padding: 10px $margin--horizontal;
 	min-width: 100px;
-
+	margin-bottom: 0;
 	color: #fff;
 	text-align: center;
 	line-height: 1.2;
+
+	@extend .ripple;
 
 	&:hover {
 		border-bottom: none;
@@ -70,8 +90,11 @@
 .tab-group__content {
 	padding: $margin--vertical*2 $margin--horizontal;
 	display: none;
+	max-height: 0;
+	transition: max-height 1s linear;
 }
 
 .tab-group__content--active {
 	display: block;
+	max-height: 2000px;
 }

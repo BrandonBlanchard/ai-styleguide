@@ -9,11 +9,10 @@ a styleguide specific component
 @import "../../variables";
 
 .color-box {
-    border: 2px solid $color-brand;
     overflow: hidden;
     color: #fff;
     transition: border-color 0.5s;
-    height: 65px;
+    height: 200px;
 }
 
 .color-box:hover {
@@ -27,9 +26,8 @@ a styleguide specific component
 .color-box__label {
     font-size: 12px;
     text-align: left;
-    width: 60%;
-    height: 100%;
-    background-color: $color-brand;
+    width: 100%;
+    background-color: #343434;
     transition: background-color 0.5s;
     padding: 0.5em 1em;
 }
@@ -40,12 +38,32 @@ a styleguide specific component
     margin-top: 2px;
 }
 
-.color--dark-blue {
-    background-color: $color-dark-blue;
-}
-
 .color--brand {
     background-color: $color-brand;
+}
+
+.color--brand-dark {
+    background-color: $color-brand-dark;
+}
+
+.color--brand-red {
+    background-color: $color-brand-red;
+}
+
+.color--brand-yellow {
+    background-color: $color-brand-yellow;
+}
+
+.color--brand-dark-yellow {
+    background-color: $color-brand-dark-yellow;
+}
+
+.color--brand-dark-gray {
+    background-color: $color-brand-dark-gray;
+}
+
+.color--dark-blue {
+    background-color: $color-dark-blue;
 }
 
 .color--light-gray {

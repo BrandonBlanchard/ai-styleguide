@@ -1,57 +1,195 @@
 <h2 class="styleguide__header">Buttons</h3>
 
-<h3>Primary</h3>
-<a class="button">Click me</a>
+<div class="row">
+	<h3>Basic</h3>
+	<p class="span--4">
+		Apply <code>.button</code> to get a basic blue button, adding the modifier <code>.button--secondary</code> adjusts the color to green. 
+	</p>
 
-<a class="button button--download">Click me</a>
+	<div class="example-box example-box--vertical span--4">
+		<div class="example-box__code">
+			<pre class="code">
 
-<a class="button" rel="external">Click me</a>
+&lt;a class=&quot;button&quot;&gt;Click me&lt;/a&gt;
 
+&lt;a class=&quot;button button--secondary&quot;&gt;Click me&lt;/a&gt;
+			</pre>
+		</div>
 
-<h3>Secondary</h3>
-
-<a class="button button--secondary">Click me</a>
-
-<a class="button button--download button--secondary">Click me</a>
-
-<a class="button button--secondary" rel="external">Click me</a>
-
-
-<h3>Disabled</h3>
-
-<a class="button button--disabled">Click me</a>
-
-<h3>Compact</h3>
-
-<a class="button button--compact button--secondary">Click me</a>
-
-<a class="button button--compact button--download button--secondary">Click me</a>
-
-<a class="button button--compact button--secondary" rel="external">Click me</a>
-
-
-<h3>Stacked</h3>
+		<div class="example-box__example">
+			<a class="button">Click me</a>
+			<a class="button button--secondary">Nah, Click me</a>
+		</div>
+	</div>
+</div>
 
 <div class="row">
+	<h3>Download and External Link Buttons</h3>
+	<p class="span--4">
+		The modifier <code>.button--download</code> can be used to create a basic download button. 
+	</p>
+
+	<div class="span--4 ">
+		<a class="button button--download">Click me</a>
+		<a class="button button--download button--secondary">Click me</a>
+	</div>
+	
+	<p class="span--4 break">
+		You can also use <code>[rel="external"]</code> to indicate that a link goes somewhere offsite.
+	</p>
+
+	<div class="span--4">		
+		<a class="button" rel="external">Click me</a>
+		<a class="button button--secondary" rel="external">Click me</a>
+	</div>
+</div>
+
+<div class="row">
+	<h3>Disabled</h3>
+	<p class="span--4">
+		Buttons can be disabled using <code>.button--disabled</code>
+	</p>
+	<div class="span--4">	
+		<a class="button button--disabled">Click me</a>
+	</div>
+</div>
+	
+<div class="row">
+	<h3>Compact</h3>
+	<p class="span--4">
+		Compact buttons are used for things like white paper downloads at the bottom of a web application (see <a href="http://observatory.brain-map.org/visualcoding">BOb</a>)
+	</p>
 	<div class="span--4">
+		<a class="button button--compact button--secondary">Click me</a>
 
-		<div class="header-box header">
-		  <h2 class="header-box__header">Transgenic Lines</h2>
-		  <div class="header-box__content header-box__content--no-pad"> 
+		<a class="button button--compact button--download button--secondary">Click me</a>
 
-				<a class="button button--stack">Cux2-CreERT2;Camk2a-tTA;Ai93(TITL- GCaMP6f)</a>
+		<a class="button button--compact button--secondary" rel="external">Click me</a>
+	</div>
+</div>
 
-				<a class="button button--stack">Rorb-IRES2-Cre;Camk2a-tTA;Ai93(TITL- GCaMP6f)</a>
+<div class="row">
+	<h3>Icon Buttons</h3>
+	<p class="span--4">
+	Add an icon's classes to the anchor tag, icon buttons should <b>NOT</b> have text. It will be the wrong font and spaced incorrectly. If you need icon and text create a modifier like <code>.button--download</code>.
+	</p>
+	<div class="example-box break span--8">
+		<div class="example-box__code">
+			<pre class="code">
 
-				<a class="button button--stack button--secondary button--disabled" rel="external">Scnn1a-Tg3-Cre;Camk2a-tTA;Ai93(TITL- GCaMP6f)</a>
+&lt;a class=&quot;button fa fa-download&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;button fa fa-wrench&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;button fa fa-cog&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;button fa fa-download&quot;&gt;&lt;/a&gt;			
+			</pre>
+		</div>
 
-				<a class="button button--stack">Nr5a1-Cre;Camk2a-tTA;Ai93(TITL- GCaMP6f)</a>
+		<div class="example-box__example">
+			<a class="button fa fa-download"></a>
+			<a class="button fa fa-wrench"></a>
+			<a class="button fa fa-cog"></a>
+			<a class="button fa fa-download"></a>
+		</div>
+	</div>
+</div>
 
-				<a class="button button--stack">Rbp4-Cre_KL100;Camk2a-tTA;Ai93(TITL- GCaMP6f)</a>
 
-				<a class="button button--stack">Emx1-IRES-Cre;Camk2a-tTA;Ai93(TITL- GCaMP6f)</a>
 
-				<a class="button button--stack button--secondary button--download">Download White Paper</a>
+<div class="row">
+	<h3>Stacked</h3>
+	<p class="span--4">
+		You can use the stacked button modifier <code>.button--stack</code> nested inside a header box to create a side bar menu, might be useful for things like the Brain Observatory front page.
+	</p>
+	
+	<div class="example-box example-box--vertical span--8 break">
+		<div class="example-box__code">
+			<pre class="code">
+&lt;div class=&quot;header-box header&quot;&gt;
+  &lt;h2 class=&quot;header-box__header&quot;&gt; Button Stack &lt;/h2&gt;
+  &lt;div class=&quot;header-box__content header-box__content--no-pad&quot;&gt; 
+
+	&lt;a class=&quot;button button--stack&quot;&gt;Link 1&lt;/a&gt;
+
+	&lt;a class=&quot;button button--stack&quot;&gt;Link 2&lt;/a&gt;
+
+	&lt;a class=&quot;button button--stack button--secondary button--disabled&quot; rel=&quot;external&quot;&gt;Link 3&lt;/a&gt;
+
+	&lt;a class=&quot;button button--stack&quot;&gt;Link 4&lt;/a&gt;
+
+	&lt;a class=&quot;button button--stack&quot;&gt;Link 5&lt;/a&gt;
+
+	&lt;a class=&quot;button button--stack&quot;&gt;Link 6&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+			</pre>
+		</div>
+	
+		<div class="example-box__example">
+			<div class="span--4">
+
+				<div class="header-box header">
+				  <h2 class="header-box__header"> Button Stack </h2>
+				  <div class="header-box__content header-box__content--no-pad"> 
+
+						<a class="button button--stack">Link 1</a>
+
+						<a class="button button--stack">Link 2</a>
+
+						<a class="button button--stack button--secondary button--disabled" rel="external">Link 3</a>
+
+						<a class="button button--stack">Link 4</a>
+
+						<a class="button button--stack">Link 5</a>
+
+						<a class="button button--stack">Link 6</a>
+				  </div>
+				</div>
+			</div>
+	
+		</div>
+	</div>	
+</div>
+
+<h3>Tool Bars</h3>
+<p class="span--4">
+	By adding <code>&lt;div class=&quot;header-box__header-tools&quot;&gt;&lt;/div&gt;</code> to the header-box header you can insert buttons to make a tool bar.
+</p>
+<div class="example-box example-box--vertical span--8 break">
+	<div class="example-box__code">
+		<pre class="code">
+&lt;div class=&quot;header-box span--5&quot;&gt;
+	&lt;h2 class=&quot;header-box__header&quot;&gt; 
+		Some Header
+		&lt;div class=&quot;header-box__header-tools&quot;&gt;
+			&lt;a class=&quot;button button--tool-bar&quot;&gt;Reset&lt;/a&gt;
+			&lt;a class=&quot;button button--tool-bar fa fa-cog&quot;&gt;&lt;/a&gt;
+			&lt;a class=&quot;button button--tool-bar fa fa-expand&quot;&gt;&lt;/a&gt;
+			&lt;a class=&quot;button button--tool-bar fa fa-close&quot;&gt;&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/h2&gt;
+	&lt;div class=&quot;header-box__content&quot;&gt; 
+
+	Lorem ipsum 
+
+	&lt;/div&gt;
+&lt;/div&gt;
+		</pre>
+	</div>
+
+	<div class="example-box__example">
+		<div class="header-box">
+		  <h2 class="header-box__header"> 
+			Some Header
+			<div class="header-box__header-tools">
+				<a class="button button--tool-bar">Reset</a>
+				<a class="button button--tool-bar fa fa-cog"></a>
+				<a class="button button--tool-bar fa fa-expand"></a>
+				<a class="button button--tool-bar fa fa-close"></a>
+			</div>
+		  </h2>
+		  <div class="header-box__content"> 
+			
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere modi quia eum quibusdam assumenda totam blanditiis dolorem ipsa provident autem, unde nobis, accusantium, esse at pariatur ex maxime omnis voluptate.
 
 		  </div>
 		</div>
