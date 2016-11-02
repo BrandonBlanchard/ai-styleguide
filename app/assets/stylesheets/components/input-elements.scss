@@ -10,6 +10,20 @@
 label{
 	margin-bottom: $margin--vertical;
 	position: relative;
+	display: inline-block;
+}
+
+/* IE10+ */
+::-ms-clear {
+  display: none;
+}
+
+/* Chrome */
+::-webkit-search-decoration,
+::-webkit-search-cancel-button,
+::-webkit-search-results-button,
+::-webkit-search-results-decoration { 
+  display: none; 
 }
 
 .checkbox--stacked.checkbox {
@@ -131,6 +145,7 @@ input[type="text"] {
 	color: $color-brand-dark-gray;
 	transition: border-color 275ms linear;
 	margin-bottom: $margin--vertical*2;
+	position: relative;
 }
 
 .text--valid:before,
@@ -139,8 +154,9 @@ input[type="text"] {
 	content: '';
 	position: absolute;
 	font: normal normal normal 16px/1 FontAwesome;
-	bottom: 0px;
+	bottom: 32px;
 	right: 8px;
+	z-index: 600;
 }
 
 .text--valid:before {
@@ -166,10 +182,6 @@ input[type="text"] {
 .text--invalid input[type="text"] {
 	border-color: $color-brand-red;
 }
-
-
-
-
 
 /****************
 
@@ -225,16 +237,18 @@ input[type="checkbox"] + .toggle-input:before {
 
 input[type="checkbox"] + .toggle-input:after {
 	content: '\f00d';
+	box-sizing: border-box;
 	width: 18px;
 	height: 18px;
 	background-color: $color-light-gray;
 	position: absolute;
 	top: 1px;
 	left: 6px;
+	padding: 2.5px;
 	border-radius: 50%;
 	transition: background-color 375ms linear, left 175ms linear, transform 175ms linear ;
 	color: #fff;
-	font: normal normal normal 12px/1.5 FontAwesome;
+	font: normal normal normal 12px/1 FontAwesome;
 	text-align: center;
 	transform: rotate(-90deg);
 }
@@ -268,4 +282,112 @@ input[type="checkbox"]:checked + .toggle-input.toggle--right:after {
 	left: calc(100% - 23px);
 }
 
+/***********************
 
+	Range Slider
+
+***********************/
+
+// resets
+input[type="range"] {
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	width: 100%;
+	background: transparent;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+	outline: none;
+}
+
+input[type="range"]::-ms-track {
+	width: 100%;
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+// end resets
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border: 1px solid $color-brand;
+	height: 16px;
+	width: 16px;
+	border-radius: 8px;
+	background: $color-brand;
+	cursor: pointer;
+	margin-top: -9px;
+}
+
+input[type="range"]::-moz-range-thumb {
+	outline: none;
+	border: 1px solid $color-brand;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: $color-brand;
+	cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+	border-top: 2px solid $color-brand;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+	border-top: 2px solid $color-brand;
+}
+
+input[type="range"]::-moz-range-track,
+input[type="range"]::-moz-range-track:focus {
+	outline: none;
+	box-sizing: border-box;
+	border: 1px solid $color-brand;
+	background: $color-brand;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: $color-brand-dark;
+  border: 1.4px solid $color-brand;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+}
+
+input[type=range]::-ms-fill-upper {
+  background: $color-brand;
+  border: 1.4px solid $color-brand;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+}
+
+input[type=range]::-ms-thumb {
+	box-sizing: border-box;
+	border: 2px solid #fff;
+	height: 4px;
+	width: 4px;
+	border-radius: 50%;
+	background: #fff;
+	cursor: pointer;
+	height: 2px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: $color-brand-dark;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: $color-brand;
+}
