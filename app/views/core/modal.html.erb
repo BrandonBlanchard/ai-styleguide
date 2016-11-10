@@ -1,19 +1,170 @@
 <h2 class="styleguide__header">Modal</h2>
 
-<a class="button" href="#my-content" data-trigger="open-modal" data-options="title:Test Modal 1">Open Modal 1</a>
-<a class="button" href="#my-content-1" data-trigger="open-modal" data-options="title:<i class='fa fa-hand-spock-o'></i>,width:wide,padding:no-pad">Open Modal 2</a>
-
-<div class="modal-content">
-	<div id="my-content">
-		<h3>Modal content 1</h3>
+<div class="row">
+	<div class="span--8">
+		<h3>Usage</h3>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates odio sapiente facere, veritatis rem ad vero voluptatum iure, dicta, perferendis reiciendis sit fuga minus accusamus aperiam. Magni veniam incidunt aliquam.
+			Modals are made up of two parts: the trigger and the modal content. The trigger contains several attibutes for modifying the modal frame and targeting the modal content.
+
+			
 		</p>
 
-		<a href="#" data-trigger="close-modal" class="button">Done</a>
-	</div>
-
-	<div id="my-content-1">
-		<img src="http://placekitten.com/600/200" alt="trek">
+		<h3>Options</h3>
+		<p>
+			There are a couple of options for adjusting the modal's width, title, and padding. These must be placed within the <code>data-options=""</code> attribute on the trigger. If using multiple options they should be comma separated and use a comma between the keys and values.
+		</p>
+		<p>
+			i.e. <code>data-options="title:This is my Modal, padding: no-pad, width: extra-wide"</code>
+		</p>
+		<ul>
+			<li>
+				<code>title: some title</code> - This changes the title in the header. The title is appended as html to allow the use of icons.
+			</li>
+			<li>
+				<code>wide:extra-wide</code> - This adjusts the width of the modal to a wider format.
+			</li>
+			<li>
+				<code>padding:no-pad</code> - This removes the padding inside the modal.
+			</li>
+		</ul>
 	</div>
 </div>
+
+<div class="span--10">	
+
+	<div class="example-box example-box--vertical">
+		<div class="example-box__code">
+			<pre class="code">
+
+&lt;a class=&quot;button&quot; href=&quot;#my-content&quot; data-trigger=&quot;open-modal&quot; data-options=&quot;title:Test Modal 1&quot;&gt;Open Modal 1&lt;/a&gt;
+
+&lt;div class=&quot;modal-content&quot;&gt;
+	&lt;div id=&quot;my-content&quot;&gt;
+		&lt;h3&gt;Modal content 1&lt;/h3&gt;
+		&lt;p&gt;
+			Lorem ipsum..
+		&lt;/p&gt;
+
+		&lt;a href=&quot;#&quot; data-trigger=&quot;close-modal&quot; class=&quot;button&quot;&gt;Done&lt;/a&gt;
+	&lt;/div&gt;
+
+	&lt;div id=&quot;my-content-1&quot;&gt;
+		&lt;img src=&quot;http://placekitten.com/600/200&quot; alt=&quot;trek&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;	
+			</pre>
+		</div>
+
+		<div class="example-box__example">
+			<a class="button" href="#my-content" data-trigger="open-modal" data-options="title:Test Modal 1">Open Modal 1</a>
+			<div class="modal-content">
+				<div id="my-content">
+					<h3>Modal content 1</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates odio sapiente facere, veritatis rem ad vero voluptatum iure, dicta, perferendis reiciendis sit fuga minus accusamus aperiam. Magni veniam incidunt aliquam.
+					</p>
+
+					<a href="#" data-trigger="close-modal" class="button">Done</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="span--10">
+	<div class="example-box example-box--vertical">
+		<div class="example-box__code">
+			<pre class="code">
+
+&lt;a class=&quot;button&quot; href=&quot;#my-content-1&quot; data-trigger=&quot;open-modal&quot; data-options=&quot;title:&lt;i class=&#039;fa fa-hand-spock-o&#039;&gt;&lt;/i&gt;,width:wide,padding:no-pad&quot;&gt;Wide Modal with Icon title&lt;/a&gt;
+			
+&lt;div class=&quot;modal-content&quot;&gt;
+	&lt;div id=&quot;my-content-1&quot;&gt;
+		&lt;img src=&quot;http://placekitten.com/600/200&quot; alt=&quot;trek&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+			</pre>
+		</div>
+		<div class="example-box__example">
+			<a class="button" href="#my-content-1" data-trigger="open-modal" data-options="title:<i class='fa fa-hand-spock-o'></i>,width:wide,padding:no-pad">Wide Modal with Icon title</a>
+			
+			<div class="modal-content">
+				<div id="my-content-1">
+					<img src="http://placekitten.com/600/200" alt="trek">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="span--10">
+	<div class="example-box example-box--vertical">
+		<div class="example-box__code">
+			<pre class="code">
+
+&lt;a class=&quot;button&quot; href=&quot;#my-content-1&quot; data-trigger=&quot;open-modal&quot; data-options=&quot;title:&lt;i class=&#039;fa fa-hand-spock-o&#039;&gt;&lt;/i&gt;,width:wide,padding:no-pad&quot;&gt;Wide Modal with Icon title&lt;/a&gt;
+
+&lt;div class=&quot;example-box__example&quot;&gt;
+	&lt;a class=&quot;button&quot; href=&quot;#rgb-selector&quot; data-trigger=&quot;open-modal&quot; data-options=&quot;title:Color Picker&quot;&gt;Open Modal&lt;/a&gt;
+	&lt;div class=&quot;modal-content&quot;&gt;
+		&lt;div id=&quot;rgb-selector&quot;&gt; 
+		
+			&lt;h5 class=&quot;collapse&quot;&gt;Red&lt;/h5&gt;
+			&lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;34&quot; data-bind=&quot;red&quot;&gt;
+			&lt;h5 class=&quot;collapse&quot;&gt;Green&lt;/h5&gt;
+			&lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;34&quot; data-bind=&quot;green&quot;&gt;
+			&lt;h5 class=&quot;collapse&quot;&gt;Blue&lt;/h5&gt;
+			&lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;34&quot; data-bind=&quot;blue&quot;&gt;
+			
+			&lt;div class=&quot;row collapse&quot;&gt;
+				&lt;div class=&quot;span--4&quot;&gt;
+					&lt;h5 class=&quot;collapse&quot;&gt;Red&lt;/h5&gt;
+					&lt;input type=&quot;number&quot; data-bind=&quot;red&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;34&quot;&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;span--4&quot;&gt;
+					&lt;h5 class=&quot;collapse&quot;&gt;Green&lt;/h5&gt;
+					&lt;input type=&quot;number&quot; data-bind=&quot;green&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;34&quot;&gt;
+				&lt;/div&gt;
+				&lt;div class=&quot;span--4&quot;&gt;
+					&lt;h5 class=&quot;collapse&quot;&gt;Blue&lt;/h5&gt;
+					&lt;input type=&quot;number&quot; data-bind=&quot;blue&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;34&quot;&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;	
+			</pre>
+		</div>
+	
+			<div class="example-box__example">
+				<a class="button" href="#rgb-selector" data-trigger="open-modal" data-options="title:Color Picker">Open Modal</a>
+				<div class="modal-content">
+					<div id="rgb-selector"> 
+							<h5 class="collapse">Red</h5>
+						<input type="range" min="0" max="100" value="34" data-bind="red">
+						<h5 class="collapse">Green</h5>
+						<input type="range" min="0" max="100" value="34" data-bind="green">
+						<h5 class="collapse">Blue</h5>
+						<input type="range" min="0" max="100" value="34" data-bind="blue">
+						
+						<div class="row collapse">
+							<div class="span--4">
+								<h5 class="collapse">Red</h5>
+								<input type="number" data-bind="red" min="0" max="100" value="34">
+							</div>
+							<div class="span--4">
+								<h5 class="collapse">Green</h5>
+								<input type="number" data-bind="green" min="0" max="100" value="34">
+							</div>
+							<div class="span--4">
+								<h5 class="collapse">Blue</h5>
+								<input type="number" data-bind="blue" min="0" max="100" value="34">
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+

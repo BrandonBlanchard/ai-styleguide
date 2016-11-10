@@ -16,7 +16,7 @@
 .modal {
 	width: 400px;
 	overflow: hidden;
-	position: absolute;
+	position: fixed;
 	top: -50vh;
 	left: calc(50vw - 200px);
 

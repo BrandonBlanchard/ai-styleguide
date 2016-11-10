@@ -16,7 +16,7 @@ body {
 }
 
 .side-bar-nav {
-    height: 88vh;
+    min-height: 88vh;
 }
 
 .side-bar-nav__header {
@@ -38,7 +38,7 @@ body {
 }
 
 .branding {
-    margin: 24px 0 0 24px;
+    margin: 24px 0 24px 24px;
 }
 
 .branding__header {

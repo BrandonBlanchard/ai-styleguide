@@ -10,11 +10,11 @@
 <body>
 <div class="chrome"></div>
 <a href="/">
-<div class="row">
-    <div class="span--12">
+<div class="row collapse">
+    <div class="span--12 collapse">
     <div class="branding">
         <h1 class="branding__header">Allen Institute</h1>
-        <h2 class="branding__sub-header">style guide</h2>
+        <h2 class="branding__sub-header collapse">style guide</h2>
     </div>
     </div>
 </div>
@@ -39,20 +39,24 @@
                     <%= link_to 'Icons', icons_path, class: "button button--stack"  %>
                     <%= link_to 'Buttons', buttons_path, class: "button button--stack" %>
                     <%= link_to 'Input Elements', input_elements_path, class: "button button--stack" %>
+                    <%= link_to 'Select List', select_list_path, class: "button button--stack" %>
                     <%= link_to 'Loaders', loaders_path, class: "button button--stack" %>
                     <%= link_to 'Media Object', mediaObject_path, class: "button button--stack" %>
+                    <%= link_to 'Tables', tables_path, class: "button button--stack" %>
                 </div>
 
                 <div class="toggle-box__toggle toggle-box__toggle--active collapse-top"> Utilities </div>
                 <div class="toggle-box__content toggle-box__content--no-pad">
                     <%= link_to 'Modal', modal_path, class: "button button--stack"   %>
                     <%= link_to 'Link Handler', link_handler_path, class: "button button--stack"   %>
+                    <%= link_to 'Toggle', toggle_path, class: 'button button--stack' %>
+                    <%= link_to 'Data Binder', data_binder_path, class: 'button button--stack' %>
                     
                 </div>
             </div>
         </div>
     </div>    
-    <div class="span--10">
+    <div class="span--10 content-container">
         <%= yield %>
     </div>
 </div>

@@ -9,7 +9,7 @@
 
 @import '../variables';
 
-html, body, p, h1, h2, h3, h4, h5, h6, label, a {
+html, body, p, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 label, a {
     box-sizing: border-box;
     font-family: $font-family-sans-serif;
     margin-top: 0;
@@ -22,8 +22,16 @@ html, body {
 	font-size: $font-size-base;
 }
 
- p, h1, h2, h3, h4, h5, h6, label, a {
- 	margin-bottom: $margin--vertical * 2;
+h1, .h1, h2, .h2 {
+    margin-bottom: $margin--large;
+}
+
+a {
+    color: $color-brand;
+}
+
+ p, h3, .h3, h4, .h4, h5, .h5, h6, .h6, label, a {
+ 	margin-bottom: $margin--vertical;
 }
 
 
@@ -40,7 +48,7 @@ code,
 	font-size: 16px;	
 }
 
-.text--input-instructions {
+.text--input-info {
     font-size: $font-size-small;
     color: $color-dark-gray;
     margin: 0;

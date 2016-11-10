@@ -21,7 +21,7 @@
   .span--#{$i} {
       width: ($column-width * $i) + ($column-gutter * ($i - 1));
       margin-right: $column-gutter;
-      margin-bottom: $margin--vertical;
+      margin-bottom: $margin--small;
       margin-top: 0;
       box-sizing: border-box;
       overflow-x: hidden;
@@ -37,6 +37,7 @@
 .row {
   overflow: auto;
   margin-bottom: $margin--vertical;
+  width: 100%;
 }
 
 .break {
@@ -47,8 +48,16 @@
   margin-bottom: $margin--vertical !important;
 }
 
-.expand--double {
-  margin-bottom: $margin--vertical * 2 !important;
+.expand--large {
+  margin-bottom: $margin--large !important;
+}
+
+.expand--small {
+  margin-bottom: $margin--small !important;
+}
+
+.expand--x-small {
+  margin-bottom: $margin--x-small !important;
 }
 
 .collapse {
@@ -71,7 +80,14 @@
   padding: 1.5em 0;
 }
 
+.content-container {
+  min-height: 100vh;
+}
 
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 /******************************* Reset ****************************/

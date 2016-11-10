@@ -10,7 +10,7 @@ Material Design Ripple Effect
 	var ink = false,
 		parent = $j(document);
 
-	$j(document).on('click', '.ripple, .button, .modal__backdrop, .toggle-box__toggle, .tab-group__tab', ripple);
+	$j(document).on('click', '.ripple, .button, .modal__backdrop, .toggle-box__toggle, .tab-group__tab, .select-box__header, .select-box__option', ripple);
 
 	function ripple(e) {
 		var x = 0,

@@ -66,4 +66,20 @@ class CoreController < ApplicationController
     render 'input-elements'
   end
 
+  def selectList
+    render 'select-list'
+  end
+
+  def tables
+    render 'tables'
+  end
+
+  def toggle
+    render 'toggle'
+  end
+
+  def dataBinder
+    render 'data-binder'
+  end
+
 end

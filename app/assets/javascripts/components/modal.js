@@ -9,6 +9,7 @@
 		data-options="key:value,key:value,key:value"
 
 	Options:
+		This should be a comma delimited list nested inside data-options=" "
 	 	title: string,
 	 	width: 'wide', 'extra-wide',
 	 	padding: 'no-pad'
@@ -27,9 +28,7 @@
 		initialized = false;
 
 	$j(document).on('click', '[data-trigger="open-modal"]', triggerOpen);
-
 	$j(document).on('click', '[data-trigger="close-modal"]', triggerClose);
-
 	$j(document).on('turbolinks:load', init);
 
 	function triggerOpen(e) {
@@ -93,16 +92,19 @@
 
 		options = $trigger.data('options');
 
-		if(options.length > 0){
-			// Split key value pairs
-			options = options.split(',');
-		}
+		if(options != undefined) {
 
-		for(let i = 0; i < options.length; i += 1) {
-			options[i] = options[i].split(':');
-			
-			if(options[i].length > 1) {
-				contentPiece.options[options[i][0]] = options[i][1];
+			if(options.length > 0) {
+				// Split key value pairs
+				options = options.split(',');
+			}
+
+			for(let i = 0; i < options.length; i += 1) {
+				options[i] = options[i].split(':');
+				
+				if(options[i].length > 1) {
+					contentPiece.options[options[i][0]] = options[i][1];
+				}
 			}
 		}
 

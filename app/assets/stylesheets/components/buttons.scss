@@ -11,7 +11,7 @@
 
 .button {
 	box-sizing: border-box;
-	padding: $margin--vertical/1.5 $margin--horizontal*1.5;
+	padding: $margin--small $margin--horizontal;
 	background-color: $color-brand;
 	display: inline-block;
 	color: #fff;
@@ -28,7 +28,7 @@
 
 .button--tool-bar {
 	margin-top: -4px;
-	padding: $margin--vertical / 2 $margin--horizontal / 2;
+	padding: $margin--x-small $margin--small;
 	margin-bottom: 0;
 	line-height: 1.2;
 	height: 28px;
@@ -100,4 +100,26 @@
 		color: $color-light-gray;
 		text-decoration: line-through;		
 	}
+}
+
+.pagination{
+	width: 268px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.pagination a:first-child,
+.pagination a:last-child {
+	padding: 12px;
+}
+
+.pagination a {
+	padding: 9px 12px;
+}
+
+.pagination .pagination__current {
+	padding: 7px 12px;
+	box-sizing: border-box;
+	background-color: #fff;
+	border: 2px solid $color-brand;
+	color: $color-brand;
 }

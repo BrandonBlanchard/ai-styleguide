@@ -16,11 +16,18 @@
 //= require_tree .
 
 
+// Components
 //= require components/tab-group
 //= require components/link-handler
 //= require components/toggle-box
 //= require components/modal
+//= require components/data-bind
+//= require components/select-list
+//= require components/toggle
+
+// Effects
 //= require effects/ripple
 
 // DEMO ONLY, DO NOT INCLUDE IN REAL SITES
  //= require demo-scripts/loader-demo
+ //= require demo-scripts/input-validation-demo

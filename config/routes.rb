@@ -34,4 +34,13 @@ Rails.application.routes.draw do
     get '/core/loaders' => 'core#loader', :as => :loaders
 
     get '/core/input-elements' => 'core#input', :as => :input_elements
+
+    get '/core/select-list' => 'core#selectList', :as => :select_list
+
+    get '/core/tables' => 'core#tables', :as => :tables
+
+    get '/core/toggle' => 'core#toggle', :as => :toggle
+
+    get '/core/data-binder' => 'core#dataBinder', :as => :data_binder
+
 end

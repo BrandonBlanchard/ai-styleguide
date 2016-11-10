@@ -1,93 +1,292 @@
 <h2 class="styleguide__header">Input Elements</h2>
 
 <div class="row">
-	<div class="span--4">
+	<div class="span--8">
 		<h3>Check Boxes</h3>
-		<input id="ch-2" type="checkbox">
-		<label for="ch-2" class="checkbox checkbox--stacked">Pen</label>
+		<p>
+			Check boxes can be used as normal for the most part, the one caveat is that you will need an <code>label.checkbox</code> immediatly following the <code>checkbox</code> element. 
+		</p>
 
-		<input id="ch-1" type="checkbox">
-		<label for="ch-1" class="checkbox checkbox--stacked">Apple</label>
+		<h5 class="collapse">Modifiers</h5>
+		<p>
+			Modifiers should be placed on the <code>label</code> element
+		</p>
+		<p>
+			<code>.checkbox--stacked</code> - Stacks the checkboxes and thier labels one on top of the other.	
+		</p>
+	
 
-		<input id="ch-3" type="checkbox">
-		<label for="ch-3" class="checkbox checkbox--stacked">Pineapple</label>
+		<div class="example-box">
+			<div class="example-box__code">
+				<pre class="code">
 
-		<input id="ch-4" type="checkbox">
-		<label for="ch-4" class="checkbox checkbox--stacked">Pineapple Pen</label>
+&lt;input id=&quot;ch-2&quot; type=&quot;checkbox&quot;&gt;
+&lt;label for=&quot;ch-2&quot; class=&quot;checkbox checkbox--stacked&quot;&gt;Pen&lt;/label&gt;
+
+&lt;input id=&quot;ch-1&quot; type=&quot;checkbox&quot;&gt;
+&lt;label for=&quot;ch-1&quot; class=&quot;checkbox checkbox--stacked&quot;&gt;Apple&lt;/label&gt;
+
+&lt;input id=&quot;ch-3&quot; type=&quot;checkbox&quot;&gt;
+&lt;label for=&quot;ch-3&quot; class=&quot;checkbox checkbox--stacked&quot;&gt;Pineapple&lt;/label&gt;
+
+&lt;input id=&quot;ch-4&quot; type=&quot;checkbox&quot;&gt;
+&lt;label for=&quot;ch-4&quot; class=&quot;checkbox checkbox--stacked&quot;&gt;Pineapple Pen&lt;/label&gt;
+
+				</pre>
+			</div>
+		
+			<div class="example-box__example">
+				<input id="ch-2" type="checkbox">
+				<label for="ch-2" class="checkbox checkbox--stacked">Pen</label>
+
+				<input id="ch-1" type="checkbox">
+				<label for="ch-1" class="checkbox checkbox--stacked">Apple</label>
+
+				<input id="ch-3" type="checkbox">
+				<label for="ch-3" class="checkbox checkbox--stacked">Pineapple</label>
+
+				<input id="ch-4" type="checkbox">
+				<label for="ch-4" class="checkbox checkbox--stacked">Pineapple Pen</label>
+		
+			</div>
+		</div>
+		
 	</div>
 
-	<div class="span--4">
+	<div class="span--8">
 		<h3>Radio Buttons</h3>
-		<input id="r-1" name="1" type="radio">
-		<label for="r-1" class="radio radio--stacked">Enterprise D</label>
+		<p>
+			Radio buttons can be used as normal for the most part, the one caveat is that you will need an <code>label.radio</code> immediatly following the <code>radio</code> element. 
+		</p>
 
-		<input id="r-2" name="1" type="radio">
-		<label for="r-2" class="radio radio--stacked">Voyager</label>
+		<h5 class="collapse">Modifiers</h5>
+		<p>
+			Modifiers should be placed on the <code>label</code> element
+		</p>
+		<p>
+			<code>.radio--stacked</code> - Stacks the checkboxes and thier labels one on top of the other.	
+		</p>
+		<div class="example-box example-box--vertical">
+			<div class="example-box__code">
+				<pre class="code">
 
-		<input id="r-3" name="1" type="radio">
-		<label for="r-3" class="radio radio--stacked">Klingon Bird of Prey</label>
+&lt;input id=&quot;r-1&quot; name=&quot;1&quot; type=&quot;radio&quot;&gt;
+&lt;label for=&quot;r-1&quot; class=&quot;radio radio--stacked&quot;&gt;Enterprise D&lt;/label&gt;
 
-		<input id="r-4" name="1" type="radio">
-		<label for="r-4" class="radio radio--stacked">Romulan War Bird</label>
-	</div>
+&lt;input id=&quot;r-2&quot; name=&quot;1&quot; type=&quot;radio&quot;&gt;
+&lt;label for=&quot;r-2&quot; class=&quot;radio radio--stacked&quot;&gt;Voyager&lt;/label&gt;
 
-	<div class="span--4 break">
-		<h3>Input Fields</h3>
-		
-		<label>
-			Standard Input
-			<input type="text" value="Standard Text">
-		</label>
+&lt;input id=&quot;r-3&quot; name=&quot;1&quot; type=&quot;radio&quot;&gt;
+&lt;label for=&quot;r-3&quot; class=&quot;radio radio--stacked&quot;&gt;Klingon Bird of Prey&lt;/label&gt;
 
-		<label class="text--validating">
-			Favorite Captian
-			<input type="text" value="Kirk">
-		</label>
+&lt;input id=&quot;r-4&quot; name=&quot;1&quot; type=&quot;radio&quot;&gt;
+&lt;label for=&quot;r-4&quot; class=&quot;radio radio--stacked&quot;&gt;Romulan War Bird&lt;/label&gt;			
 
-		<label class="text--valid">
-			Favorite Doctor
-			<input type="text" value="David Tenant">
-		</label>
+				</pre>
+			</div>
 
-		<label class="text--invalid">
-			Favorite Food
-			<input type="text" value="Kale">
-		</label>
+			<div class="example-box__example">
+				<input id="r-1" name="1" type="radio">
+				<label for="r-1" class="radio radio--stacked">Enterprise D</label>
 
-	</div>
+				<input id="r-2" name="1" type="radio">
+				<label for="r-2" class="radio radio--stacked">Voyager</label>
 
-	<div class="span--4">
-		<h3>Toggle</h3>
-		
-		<div>
-			<input id="toggle-0" type="checkbox">
-			<label for="toggle-0" class="toggle-input">I love toggles</label>
+				<input id="r-3" name="1" type="radio">
+				<label for="r-3" class="radio radio--stacked">Klingon Bird of Prey</label>
+
+				<input id="r-4" name="1" type="radio">
+				<label for="r-4" class="radio radio--stacked">Romulan War Bird</label>
+			</div>
 		</div>
 
-		<div>
-			<input id="toggle-1" type="checkbox">
-			<label for="toggle-1" class="toggle-input">I love toggles</label>
-		</div>
-		
-		<div>
-			<input id="toggle-2" type="checkbox">
-			<label for="toggle-2" class="toggle-input toggle--right collapse">I love right side toggles</label>
-			<p class="text--input-instructions">tiny text explaining my love for toggles</p>
-		</div>
 	</div>
 
-	<div class="span--4 break">
-		<h3>Input Fields</h3>
-		<label>
+	<div class="span--8 break">
+		<h3>Text Input and Validation</h3>
+		<p>
+			Labels should be wrapped around the text <code>input</code> element. The below example shows what validation looks like.
+		</p>
+
+		<h5 class="collapse">Modifiers</h5>
+		<p>
+			Modifiers should be placed on the <code>label</code> element.
+		</p>
+		<ul>
+			<li>
+				<code>.text--validating</code> - displays a loading icon while validation is in progress.
+			</li>
+			<li>
+				<code>.text--valid</code> - displays a green check mark icon and changes the input border to green.
+			</li>
+			<li>
+				<code>.text--invalid</code> - displays a red 'x' icon and changes the input border to red.
+			</li>
+		</ul>
+		<div class="example-box">
+			<div class="example-box__code">
+				<pre class="code">
+				
+&lt;label class=&quot;expand--large&quot; &gt;
+	Standard Input
+	&lt;input type=&quot;text&quot; value=&quot;Standard Text&quot;&gt;
+&lt;/label&gt;
+
+&lt;h3 class=&quot;collapse&quot;&gt;Validated input, try me!&lt;/h3&gt;
+&lt;label&gt;
+	Favorite Captian
+	&lt;input type=&quot;text&quot; value=&quot;Kirk&quot;&gt;
+&lt;/label&gt;
+				</pre>
+			</div>
+		
+			<div class="example-box__example">
+				<label class="expand--large">
+					Standard Input
+					<input type="text" value="Standard Text">
+				</label>
+
+				<h3 class="collapse">Validated input, try me!</h3>
+				<label class="text-validation-demo collapse">
+					Favorite captain
+					<input type="text" value="">
+				</label>
+				<p class="text--input-info">try 'Kirk', 'Picard', 'Sisko', or 'Janeway'</p>
+
+			</div>
+		</div>
+
+		<h3>Text Areas</h3>
+		<p>
+			<code>textarea</code> can be used without any special implementation. Keep in mind it's width is locked to it's container's width.
+		</p>
+
+		<label class="span--12">
 			Favorite food
 			<textarea></textarea>
 		</label>
 	</div>
 
+	<div class="span--8">
+		<h3>Toggle</h3>
+		<p>
+			An <code>id</code> should be set on your <code>checkbox</code> and supplied in the <code>for=""</code> of the <code>label</code>. The <code>label</code> must follow the checkbox.
+		</p>
+
+		<h5 class="collapse">Modifiers</h5>
+		<p>
+			Modifiers should be placed on the <code>label</code> element.
+		</p>
+		<ul>
+			<li>
+				<code>.toggle--right</code> - Moves the label to the left and the toggle to the right.
+			</li>
+		</ul>
+
+
+		<div class="example-box example-box--vertical">
+			<div class="example-box__code">
+				<pre class="code">
+		
+&lt;div&gt;
+	&lt;input id=&quot;toggle-1&quot; type=&quot;checkbox&quot;&gt;
+	&lt;label for=&quot;toggle-1&quot; class=&quot;toggle-input&quot;&gt;I love toggles&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+	&lt;input id=&quot;toggle-2&quot; type=&quot;checkbox&quot;&gt;
+	&lt;label for=&quot;toggle-2&quot; class=&quot;toggle-input toggle--right&quot;&gt;I love right side toggles too&lt;/label&gt;
+&lt;/div&gt;
+				</pre>
+			</div>
+		
+			<div class="example-box__example">
+		
+				<div>
+					<input id="toggle-1" type="checkbox">
+					<label for="toggle-1" class="toggle-input">I love toggles</label>
+				</div>
+				
+				<div>
+					<input id="toggle-2" type="checkbox">
+					<label for="toggle-2" class="toggle-input toggle--right collapse">I love right side toggles too</label>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
 
 	<div class="span--8">
 		<h3>Range Slider</h3>
-		<input type="range" min="0" max="100">
+		<p>
+			The range <code>input</code> can be used as normal without any special class. Be aware that due to the way ie/edge render the range <code>input</code> it will look a little different. See data-bind in the utilities section for more info on binding input fields.
+		</p>
+		<div class="example-box example-box--vertical">
+			<div class="example-box__code">
+				<pre class="code">
+
+Red
+&lt;input data-bind=&quot;rgb_red&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;50&quot;&gt;
+Green
+&lt;input data-bind=&quot;rgb_green&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;50&quot;&gt;
+Blue
+&lt;input data-bind=&quot;rgb_blue&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;50&quot;&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;span--2&quot;&gt;
+		&lt;label&gt;Red
+			&lt;input class=&quot;span-2&quot; type=&quot;text&quot; data-bind=&quot;rgb_red&quot; value=&quot;50&quot;/&gt;				
+		&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;span--2&quot;&gt;
+		&lt;label&gt;
+			Green
+			&lt;input class=&quot;span-2&quot; type=&quot;text&quot; data-bind=&quot;rgb_blue&quot; value=&quot;50&quot;/&gt;				
+		&lt;/label&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;span--2&quot;&gt;
+		&lt;label&gt;
+			Blue
+			&lt;input class=&quot;span-2&quot; type=&quot;text&quot; data-bind=&quot;rgb_green&quot; value=&quot;50&quot;/&gt;	
+		&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+				</pre>
+			</div>
+		
+			<div class="example-box__example">
+				Red
+				<input data-bind="rgb_red" type="range" min="0" max="100" value="50">
+
+				Green
+				<input data-bind="rgb_green" type="range" min="0" max="100" value="50">
+
+				Blue
+				<input data-bind="rgb_blue" type="range" min="0" max="100" value="50">
+				<div class="row">
+
+					<div class="span--2">
+						<label>Red
+							<input class="span-2" type="text" data-bind="rgb_red" value="50"/>				
+						</label>
+					</div>
+					<div class="span--2">
+						<label>
+							Green
+							<input class="span-2" type="text" data-bind="rgb_green" value="50"/>				
+						</label>
+					</div>
+
+					<div class="span--2">
+						<label>
+							Blue
+							<input class="span-2" type="text" data-bind="rgb_blue" min="0" max="100" value="50"/>	
+						</label>
+					</div>
+					
+				</div>
+			</div>
+		</div>
 	</div>
 
 </div>

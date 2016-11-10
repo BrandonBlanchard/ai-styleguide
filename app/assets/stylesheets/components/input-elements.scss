@@ -8,7 +8,7 @@
 @import "../effects/ripple";
 
 label{
-	margin-bottom: $margin--vertical;
+	margin-bottom: $margin--small;
 	position: relative;
 	display: inline-block;
 }
@@ -144,7 +144,6 @@ input[type="text"] {
 	font-size: $font-size-base;
 	color: $color-brand-dark-gray;
 	transition: border-color 275ms linear;
-	margin-bottom: $margin--vertical*2;
 	position: relative;
 }
 
@@ -154,7 +153,7 @@ input[type="text"] {
 	content: '';
 	position: absolute;
 	font: normal normal normal 16px/1 FontAwesome;
-	bottom: 32px;
+	bottom: 8px;
 	right: 8px;
 	z-index: 600;
 }
@@ -191,14 +190,16 @@ input[type="text"] {
 
 textarea {
 	width: 100%;
+	min-width: 100%;
 	max-width: 100%;
+	resize: vertical;
 	border: 2px solid $color-light-gray;
 	border-radius: 2px;
 	padding: 5px 8px;
 	font-size: $font-size-base;
 	color: $color-brand-dark-gray;
 	transition: border-color 275ms linear;
-	margin-bottom: $margin--vertical*2;
+	margin-bottom: $margin--vertical;
 }
 
 textarea:focus {

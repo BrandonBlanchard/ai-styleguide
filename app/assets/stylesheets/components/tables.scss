@@ -85,8 +85,67 @@
   color: $white;
 }
 
+/*****************************
+
+  Block Table
+
+*****************************/
+
+.table-block {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $color-light-gray;
+  margin-bottom: $margin--vertical;
+}
+
+.table-block__header {
+  background-color: $color-brand;
+  text-align: left;
+  padding: 12px;
+  color: #fff;
+}
+
+.table-block__header--sortable:hover {
+  background-color: lighten($color-brand, 5%);
+  cursor: pointer;
+}
+
+.table-block__header--sorted-desc:after,
+.table-block__header--sorted-asc:after {
+  @extend .icon-font;
+  display: inline-block;
+  content: '\f107';
+  transition: transform 175ms ease;
+}
+
+.table-block__header--sorted-asc:after {
+  transform: rotate(180deg);
+}
+
+.table-block__row {
+  
+}
+
+.table-block__row:nth-child(2n+1){
+  background-color: $color-lighter-gray;
+}
+
+.table-block__cell {
+  padding: 12px;
+}
+
+
+/************************
+
+  Table widths
+
+*************************/
 
 table {
+  .w--5 {
+    width: 5%;
+  }
+
   .w--10 {
     width: 10%;
   }
