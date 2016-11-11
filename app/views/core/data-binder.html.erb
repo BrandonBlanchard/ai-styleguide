@@ -1,0 +1,70 @@
+<h2 class="styleguide__header">Data Binder</h2>
+
+<div class="row">
+	<div class="span--8">
+		<h3>Usage</h3>
+		<p>
+		 	To bind multiple input element values apply the <code>data-bind="bind-group"</code>	data attribute. Any element with the same <code>bind-group</code> will have the same value as all other elements in that group.
+			
+		</p>
+		<h3>Limitations</h3>
+		<p>
+ 			Bind does not support dropdowns.
+		</p>
+	</div>
+	<div class="span--10">
+		<div class="example-box">
+			<div class="example-box__code">
+				<pre class="code">
+
+&lt;h5 class=&quot;collapse&quot;&gt;Red&lt;/h5&gt;
+&lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;34&quot; data-bind=&quot;red&quot;&gt;
+&lt;h5 class=&quot;collapse&quot;&gt;Green&lt;/h5&gt;
+&lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;34&quot; data-bind=&quot;green&quot;&gt;
+&lt;h5 class=&quot;collapse&quot;&gt;Blue&lt;/h5&gt;
+&lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;34&quot; data-bind=&quot;blue&quot;&gt;
+
+&lt;div class=&quot;row collapse&quot;&gt;
+	&lt;div class=&quot;span--4&quot;&gt;
+		&lt;h5 class=&quot;collapse&quot;&gt;Red&lt;/h5&gt;
+		&lt;input type=&quot;number&quot; data-bind=&quot;red&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;34&quot;&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;span--4&quot;&gt;
+		&lt;h5 class=&quot;collapse&quot;&gt;Green&lt;/h5&gt;
+		&lt;input type=&quot;number&quot; data-bind=&quot;green&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;34&quot;&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;span--4&quot;&gt;
+		&lt;h5 class=&quot;collapse&quot;&gt;Blue&lt;/h5&gt;
+		&lt;input type=&quot;number&quot; data-bind=&quot;blue&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;34&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+				</pre>
+			</div>
+		
+			<div class="example-box__example">
+				<h5 class="collapse">Red</h5>
+				<input type="range" min="0" max="100" value="34" data-bind="red">
+				<h5 class="collapse">Green</h5>
+				<input type="range" min="0" max="100" value="34" data-bind="green">
+				<h5 class="collapse">Blue</h5>
+				<input type="range" min="0" max="100" value="34" data-bind="blue">
+
+				<div class="row collapse">
+					<div class="span--4">
+						<h5 class="collapse">Red</h5>
+						<input type="number" data-bind="red" min="0" max="100" value="34">
+					</div>
+					<div class="span--4">
+						<h5 class="collapse">Green</h5>
+						<input type="number" data-bind="green" min="0" max="100" value="34">
+					</div>
+					<div class="span--4">
+						<h5 class="collapse">Blue</h5>
+						<input type="number" data-bind="blue" min="0" max="100" value="34">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

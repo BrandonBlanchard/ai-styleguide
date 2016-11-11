@@ -1,0 +1,99 @@
+/***********************************************************************************
+
+	Component: 
+		Select List
+
+	<div class="select-box">
+		<div class="select-box__header"></div>
+		<ul class="select-box__content">
+			<li>Value 1</li>
+			<li>Value 2</li>
+		</ul>
+	</div>
+
+
+***********************************************************************************/
+@import "../variables";
+@import "buttons";
+@import "../effects/ripple";
+
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+select:focus {
+	outline: none;
+}
+
+.select-box {
+	overflow: hidden;
+
+}
+
+.select-box__header {
+	@extend .button;
+
+	padding-right: 50px;
+	position: relative;
+	display: block;
+
+	&:after {
+		@extend .icon-font;
+		content: '\f078';
+		font-size: 15px;
+		color: #fff;
+		position: absolute;
+		right: 10px;
+		top: 11px;
+	}
+}
+
+.select-box__content {
+	visibility: hidden;
+	opacity: 0;
+	clear: both;
+	list-style: none;
+	padding: 0;
+	position: absolute;
+	left: 0px;
+	top: -18px;
+	height: auto;
+	min-width: 150px;
+	z-index: 400;
+	background-color: #fff;
+	border: 1px solid $color-light-gray;
+	border-top: 2px solid $color-brand-dark;
+	border-width: 2px 1px 1px 1px;
+	
+	transition: visibility 75ms ease, opacity 375ms ease;
+
+	li:hover {
+		background-color: $color-light-gray;
+	}
+}
+
+.select-box--active .select-box__content {
+	visibility: visible;
+	opacity: 1;
+}
+
+.select-box__option {
+	@extend .ripple;
+	
+	display: block;
+	cursor: pointer;
+	padding: 5px 10px 5px 30px;
+}
+
+.select-box__option--active:before {
+	position: absolute;
+	color: $color-brand;
+	content: '\f00c';
+	@extend .icon-font;
+
+	left: 5px;
+	top: 5px;
+}

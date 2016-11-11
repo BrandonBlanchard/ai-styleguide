@@ -1,0 +1,29 @@
+<h2 class="styleguide__header">Toggle</h2>
+
+<div class="row">
+	<div class="span--8">
+		<h3>Usage</h3>
+		<p>
+			The toggle utility toggles a class on it's target when clicked. Apply <code>data-trigger="toggle"</code> to your element and when clicked it will add or remove the class defined in <code>data-class=".to-toggle"</code> to the target defined in <code>data-target=".some-other-element"</code>. <code>data-target</code> is a jquery selector so feel free to use ids, or multiple classes to get the result desired.
+		</p>
+	</div>
+	<div class="span--10">
+		<div class="example-box">
+			<div class="example-box__code">
+				<pre class="code">
+
+&lt;div class=&quot;button&quot; data-trigger=&quot;toggle&quot; data-class=&quot;fa-spin&quot; data-target=&quot;.spin-guy&quot;&gt;Toggle Spin&lt;/div&gt;
+&lt;div class=&quot;spin-guy fa fa-spinner&quot;&gt;&lt;/div&gt;		
+				</pre>
+			</div>
+		
+			<div class="example-box__example">
+		
+				<div class="button" data-trigger="toggle" data-class="fa-pulse" data-target=".spin-guy">Toggle Spin</div>
+				<div class="spin-guy fa fa-4x fa-spinner"></div>
+		
+			</div>
+		</div>
+
+	</div>
+</div>
